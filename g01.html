@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avoidance Game</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+        background: #000;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+      const canvas = document.getElementById("gameCanvas");
+      const context = canvas.getContext("2d");
+
+      // キャンバスのサイズを設定
+      const scale = window.devicePixelRatio || 1;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      context.scale(scale, scale);
+
+      const plane = {
+        x: 100,
+        y: canvas.height / 2,
+        width: 50,
+        height: 30,
+        color: "blue",
+        dy: 0,
+        gravity: 0.2,
+      };
+
+      const obstacles = [];
+
+      function drawPlane() {
+        context.fillStyle = plane.color;
+        context.fillRect(plane.x, plane.y, plane.width, plane.height);
+      }
+
+      function drawObstacles() {
+        obstacles.forEach((obstacle) => {
+          context.fillStyle = obstacle.color;
+          context.fillRect(
+            obstacle.x,
+            obstacle.y,
+            obstacle.width,
+            obstacle.height
+          );
+        });
+      }
+
+      function generateObstacle() {
+        const obstacle = {
+          x: canvas.width,
+          y: Math.random() * (canvas.height - 100) + 50,
+          width: 30,
+          height: Math.random() * 200 + 50,
+          color: "red",
+          dx: 3,
+        };
+        obstacles.push(obstacle);
+      }
+
+      function movePlane() {
+        plane.y += plane.dy;
+        plane.dy += plane.gravity;
+
+        if (plane.y + plane.height > canvas.height) {
+          plane.y = canvas.height - plane.height;
+          plane.dy = 0;
+        }
+      }
+
+      function moveObstacles() {
+        obstacles.forEach((obstacle) => {
+          obstacle.x -= obstacle.dx;
+
+          if (obstacle.x + obstacle.width < 0) {
+            obstacles.shift();
+          }
+        });
+      }
+
+      function checkCollision() {
+        obstacles.forEach((obstacle) => {
+          if (
+            plane.x < obstacle.x + obstacle.width &&
+            plane.x + plane.width > obstacle.x &&
+            plane.y < obstacle.y + obstacle.height &&
+            plane.y + plane.height > obstacle.y
+          ) {
+            // 衝突した場合の処理
+            gameOver();
+          }
+        });
+      }
+
+      function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function draw() {
+        clearCanvas();
+        drawPlane();
+        drawObstacles();
+      }
+
+      function update() {
+        draw();
+        movePlane();
+        moveObstacles();
+        checkCollision();
+
+        requestAnimationFrame(update);
+      }
+
+      function jump() {
+        plane.dy = -6;
+      }
+
+      function gameOver() {
+        // ゲームオーバーの処理
+        alert("Game Over");
+        location.reload();
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 32) {
+          jump();
+        }
+      });
+
+      canvas.addEventListener("touchstart", jump);
+
+      setInterval(generateObstacle, 2000);
+
+      update();
+    </script>
+  </body>
+</html>
