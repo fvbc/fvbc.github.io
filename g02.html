@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rock Paper Scissors</title>
+    <title>Simple RPG Game</title>
     <style>
       body {
-        text-align: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
       }
-      h1 {
-        font-size: 24px;
-        margin-top: 50px;
-      }
-      #choices {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .choice {
-        cursor: pointer;
-        margin: 0 10px;
-      }
-      #result {
-        font-size: 18px;
-        margin-top: 30px;
+      canvas {
+        display: block;
+        background: #000;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="choices">
-      <div class="choice" onclick="playGame('rock')">
-        <img src="rock.png" alt="Rock" width="100" height="100">
-        <p>Rock</p>
-      </div>
-      <div class="choice" onclick="playGame('paper')">
-        <img src="paper.png" alt="Paper" width="100" height="100">
-        <p>Paper</p>
-      </div>
-      <div class="choice" onclick="playGame('scissors')">
-        <img src="scissors.png" alt="Scissors" width="100" height="100">
-        <p>Scissors</p>
-      </div>
-    </div>
-    <div id="result"></div>
-
+    <canvas id="gameCanvas"></canvas>
     <script>
-      function playGame(userChoice) {
-        const choices = ["rock", "paper", "scissors"];
-        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      const canvas = document.getElementById("gameCanvas");
+      const context = canvas.getContext("2d");
 
-        let result;
+      // キャンバスのサイズを設定
+      const scale = window.devicePixelRatio || 1;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+      context.scale(scale, scale);
 
-        if (userChoice === computerChoice) {
-          result = "It's a tie!";
-        } else if (
-          (userChoice === "rock" && computerChoice === "scissors") ||
-          (userChoice === "paper" && computerChoice === "rock") ||
-          (userChoice === "scissors" && computerChoice === "paper")
-        ) {
-          result = "You win!";
-        } else {
-          result = "You lose!";
+      // プレイヤーの情報
+      const player = {
+        x: 100,
+        y: 100,
+        level: 1,
+        health: 100,
+        attack: 10,
+        experience: 0,
+      };
+
+      // 敵の情報
+      const enemy = {
+        x: canvas.width - 100,
+        y: canvas.height - 100,
+        health: 50,
+        attack: 5,
+      };
+
+      // プレイヤーと敵の描画
+      function drawPlayer() {
+        context.fillStyle = "blue";
+        context.fillRect(player.x, player.y, 30, 30);
+      }
+
+      function drawEnemy() {
+        context.fillStyle = "red";
+        context.fillRect(enemy.x, enemy.y, 30, 30);
+      }
+
+      // プレイヤーと敵の戦闘
+      function battle() {
+        const playerDamage = Math.ceil(Math.random() * player.attack);
+        const enemyDamage = Math.ceil(Math.random() * enemy.attack);
+
+        player.health -= enemyDamage;
+        enemy.health -= playerDamage;
+
+        if (player.health <= 0) {
+          alert("Game Over - You Lose");
+          location.reload();
         }
 
-        document.getElementById("result").innerText = `Your choice: ${userChoice} | Computer's choice: ${computerChoice} | Result: ${result}`;
+        if (enemy.health <= 0) {
+          player.experience += 10;
+          if (player.experience >= 100) {
+            player.level++;
+            player.experience = 0;
+          }
+          alert("You Win! Level up!");
+          resetEnemy();
+        }
       }
+
+      // 敵のリセット
+      function resetEnemy() {
+        enemy.health = 50;
+        enemy.x = canvas.width - 100;
+        enemy.y = canvas.height - 100;
+      }
+
+      // ゲームループ
+      function gameLoop() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        drawPlayer();
+        drawEnemy();
+        requestAnimationFrame(gameLoop);
+      }
+
+      gameLoop();
+
+      // クリック時に戦闘
+      canvas.addEventListener("click", function () {
+        battle();
+      });
     </script>
   </body>
 </html>
