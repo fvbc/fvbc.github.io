@@ -1,108 +1,138 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple RPG Game</title>
+    <title>Flappy Bird</title>
     <style>
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
+        background-color: #87ceeb;
       }
       canvas {
         display: block;
-        background: #000;
         margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <canvas id="gameCanvas"></canvas>
+    <canvas id="flappyBirdCanvas"></canvas>
     <script>
-      const canvas = document.getElementById("gameCanvas");
+      const canvas = document.getElementById("flappyBirdCanvas");
       const context = canvas.getContext("2d");
 
       // キャンバスのサイズを設定
-      const scale = window.devicePixelRatio || 1;
       const width = window.innerWidth;
       const height = window.innerHeight;
-      canvas.width = width * scale;
-      canvas.height = height * scale;
-      context.scale(scale, scale);
+      canvas.width = width;
+      canvas.height = height;
 
-      // プレイヤーの情報
-      const player = {
-        x: 100,
-        y: 100,
-        level: 1,
-        health: 100,
-        attack: 10,
-        experience: 0,
-      };
+      // フラッピーバードの初期位置と速度
+      let birdX = 100;
+      let birdY = canvas.height / 2;
+      let birdVelocityY = 0;
 
-      // 敵の情報
-      const enemy = {
-        x: canvas.width - 100,
-        y: canvas.height - 100,
-        health: 50,
-        attack: 5,
-      };
+      // フラッピーバードのサイズと重力
+      const birdSize = 20;
+      const gravity = 0.5;
 
-      // プレイヤーと敵の描画
-      function drawPlayer() {
-        context.fillStyle = "blue";
-        context.fillRect(player.x, player.y, 30, 30);
+      // パイプの設定
+      const pipeWidth = 30;
+      const pipeGap = 150;
+      let pipes = [];
+      let pipeX = canvas.width;
+
+      // スコア
+      let score = 0;
+
+      // ゲームオーバー
+      let gameOver = false;
+
+      // フラッピーバードのジャンプ
+      function jump() {
+        birdVelocityY = -10;
       }
 
-      function drawEnemy() {
-        context.fillStyle = "red";
-        context.fillRect(enemy.x, enemy.y, 30, 30);
+      // パイプの生成
+      function generatePipe() {
+        const pipeHeight = Math.random() * (canvas.height - 200) + 100;
+        pipes.push({ x: canvas.width, height: pipeHeight });
       }
 
-      // プレイヤーと敵の戦闘
-      function battle() {
-        const playerDamage = Math.ceil(Math.random() * player.attack);
-        const enemyDamage = Math.ceil(Math.random() * enemy.attack);
-
-        player.health -= enemyDamage;
-        enemy.health -= playerDamage;
-
-        if (player.health <= 0) {
-          alert("Game Over - You Lose");
-          location.reload();
-        }
-
-        if (enemy.health <= 0) {
-          player.experience += 10;
-          if (player.experience >= 100) {
-            player.level++;
-            player.experience = 0;
-          }
-          alert("You Win! Level up!");
-          resetEnemy();
-        }
-      }
-
-      // 敵のリセット
-      function resetEnemy() {
-        enemy.health = 50;
-        enemy.x = canvas.width - 100;
-        enemy.y = canvas.height - 100;
-      }
-
-      // ゲームループ
+      // メインゲームループ
       function gameLoop() {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        drawPlayer();
-        drawEnemy();
-        requestAnimationFrame(gameLoop);
+        if (!gameOver) {
+          // フラッピーバードの動き
+          birdY += birdVelocityY;
+          birdVelocityY += gravity;
+
+          // パイプの動き
+          for (let i = pipes.length - 1; i >= 0; i--) {
+            pipes[i].x -= 5;
+
+            // パイプとの当たり判定
+            if (
+              birdX + birdSize > pipes[i].x &&
+              birdX < pipes[i].x + pipeWidth &&
+              (birdY < pipes[i].height || birdY + birdSize > pipes[i].height + pipeGap)
+            ) {
+              gameOver = true;
+            }
+
+            // パイプを通過したらスコアを増加
+            if (pipes[i].x + pipeWidth < birdX && !pipes[i].scored) {
+              pipes[i].scored = true;
+              score++;
+            }
+
+            // パイプが画面外に出たら削除
+            if (pipes[i].x + pipeWidth < 0) {
+              pipes.splice(i, 1);
+            }
+          }
+
+          // パイプ生成
+          if (pipeX <= canvas.width - 300) {
+            generatePipe();
+            pipeX = canvas.width;
+          }
+
+          // キャンバスをクリア
+          context.clearRect(0, 0, canvas.width, canvas.height);
+
+          // フラッピーバードを描画
+          context.fillStyle = "#f00";
+          context.fillRect(birdX, birdY, birdSize, birdSize);
+
+          // パイプを描画
+          context.fillStyle = "#0f0";
+          for (const pipe of pipes) {
+            context.fillRect(pipe.x, 0, pipeWidth, pipe.height);
+            context.fillRect(pipe.x, pipe.height + pipeGap, pipeWidth, canvas.height - pipe.height - pipeGap);
+          }
+
+          // スコアを表示
+          context.fillStyle = "#000";
+          context.font = "30px Arial";
+          context.fillText(`Score: ${score}`, 20, 40);
+
+          // ゲームオーバー時の表示
+          if (gameOver) {
+            context.fillStyle = "#000";
+            context.font = "60px Arial";
+            context.fillText("Game Over", canvas.width / 2 - 150, canvas.height / 2);
+          }
+
+          // アニメーション
+          requestAnimationFrame(gameLoop);
+        }
       }
 
-      gameLoop();
+      // クリックでジャンプ
+      canvas.addEventListener("click", jump);
 
-      // クリック時に戦闘
-      canvas.addEventListener("click", function () {
-        battle();
-      });
+      // ゲームスタート
+      gameLoop();
     </script>
   </body>
 </html>
