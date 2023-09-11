@@ -1,162 +1,201 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fireworks Animation</title>
+    <title>ブロック崩しゲーム</title>
     <style>
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: black;
+        background-color: #f0f0f0;
       }
       canvas {
         display: block;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <canvas id="fireworksCanvas"></canvas>
+    <canvas id="gameCanvas"></canvas>
     <script>
-      const canvas = document.getElementById("fireworksCanvas");
+      const canvas = document.getElementById("gameCanvas");
       const context = canvas.getContext("2d");
 
       // キャンバスのサイズを設定
-      const scale = window.devicePixelRatio || 1;
       const width = window.innerWidth;
       const height = window.innerHeight;
-      canvas.width = width * scale;
-      canvas.height = height * scale;
-      context.scale(scale, scale);
+      canvas.width = width;
+      canvas.height = height;
 
-      const fireworks = [];
+      // パドルの設定
+      const paddleWidth = 100;
+      const paddleHeight = 10;
+      let paddleX = (canvas.width - paddleWidth) / 2;
+      const paddleSpeed = 8;
 
-      // 花火のクラス
-      class Firework {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = canvas.height;
-          this.color = getRandomColor();
-          this.radius = 2;
-          this.velocity = {
-            x: Math.random() * 5 - 2.5,
-            y: Math.random() * -15 - 10,
-          };
-          this.gravity = 0.2;
-          this.opacity = 1;
-          this.isExploded = false;
-          this.particles = [];
+      // ボールの設定
+      const ballRadius = 10;
+      let ballX = canvas.width / 2;
+      let ballY = canvas.height - 30;
+      let ballDX = 2;
+      let ballDY = -2;
+
+      // ブロックの設定
+      const brickRowCount = 3;
+      const brickColumnCount = 5;
+      const brickWidth = 80;
+      const brickHeight = 20;
+      const brickPadding = 10;
+      const brickOffsetTop = 30;
+      const brickOffsetLeft = 30;
+      const bricks = [];
+
+      for (let c = 0; c < brickColumnCount; c++) {
+        bricks[c] = [];
+        for (let r = 0; r < brickRowCount; r++) {
+          bricks[c][r] = { x: 0, y: 0, status: 1 };
         }
+      }
 
-        explode() {
-          this.isExploded = true;
-          for (let i = 0; i < 100; i++) {
-            const particle = new Particle(this.x, this.y, this.color);
-            this.particles.push(particle);
-          }
+      // スコアの初期化
+      let score = 0;
+
+      // ユーザーのパドル操作
+      let rightPressed = false;
+      let leftPressed = false;
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key == "Right" || e.key == "ArrowRight") {
+          rightPressed = true;
+        } else if (e.key == "Left" || e.key == "ArrowLeft") {
+          leftPressed = true;
         }
+      });
 
-        update() {
-          if (!this.isExploded) {
-            this.x += this.velocity.x;
-            this.y += this.velocity.y;
-            this.velocity.y += this.gravity;
-            if (this.velocity.y >= 0) {
-              this.explode();
-            }
-          } else {
-            for (let i = this.particles.length - 1; i >= 0; i--) {
-              this.particles[i].update();
-              if (this.particles[i].opacity <= 0) {
-                this.particles.splice(i, 1);
+      document.addEventListener("keyup", (e) => {
+        if (e.key == "Right" || e.key == "ArrowRight") {
+          rightPressed = false;
+        } else if (e.key == "Left" || e.key == "ArrowLeft") {
+          leftPressed = false;
+        }
+      });
+
+      // ブロックとの当たり判定
+      function collisionDetection() {
+        for (let c = 0; c < brickColumnCount; c++) {
+          for (let r = 0; r < brickRowCount; r++) {
+            const brick = bricks[c][r];
+            if (brick.status == 1) {
+              if (
+                ballX > brick.x &&
+                ballX < brick.x + brickWidth &&
+                ballY > brick.y &&
+                ballY < brick.y + brickHeight
+              ) {
+                ballDY = -ballDY;
+                brick.status = 0;
+                score++;
+                if (score == brickRowCount * brickColumnCount) {
+                  alert("おめでとう！ブロックを全て破壊しました！");
+                  document.location.reload();
+                }
               }
             }
           }
         }
+      }
 
-        draw() {
-          context.beginPath();
-          context.fillStyle = this.color;
-          if (!this.isExploded) {
-            context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          } else {
-            for (const particle of this.particles) {
-              context.moveTo(this.x, this.y);
-              context.lineTo(particle.x, particle.y);
+      // パドルの描画
+      function drawPaddle() {
+        context.beginPath();
+        context.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+        context.fillStyle = "#0095DD";
+        context.fill();
+        context.closePath();
+      }
+
+      // ボールの描画
+      function drawBall() {
+        context.beginPath();
+        context.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+        context.fillStyle = "#0095DD";
+        context.fill();
+        context.closePath();
+      }
+
+      // ブロックの描画
+      function drawBricks() {
+        for (let c = 0; c < brickColumnCount; c++) {
+          for (let r = 0; r < brickRowCount; r++) {
+            if (bricks[c][r].status == 1) {
+              const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+              const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+              bricks[c][r].x = brickX;
+              bricks[c][r].y = brickY;
+              context.beginPath();
+              context.rect(brickX, brickY, brickWidth, brickHeight);
+              context.fillStyle = "#0095DD";
+              context.fill();
+              context.closePath();
             }
           }
-          context.closePath();
-          context.fill();
         }
       }
 
-      // パーティクルのクラス
-      class Particle {
-        constructor(x, y, color) {
-          this.x = x;
-          this.y = y;
-          this.color = color;
-          this.radius = 2;
-          this.velocity = {
-            x: Math.random() * 2 - 1,
-            y: Math.random() * 2 - 1,
-          };
-          this.opacity = 1;
-        }
-
-        update() {
-          this.x += this.velocity.x;
-          this.y += this.velocity.y;
-          this.velocity.x *= 0.99;
-          this.velocity.y *= 0.99;
-          this.opacity -= 0.02;
-        }
-
-        draw() {
-          context.beginPath();
-          context.fillStyle = this.color;
-          context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          context.closePath();
-          context.globalAlpha = this.opacity;
-          context.fill();
-          context.globalAlpha = 1;
-        }
+      // スコア表示
+      function drawScore() {
+        context.font = "16px Arial";
+        context.fillStyle = "#0095DD";
+        context.fillText("Score: " + score, 8, 20);
       }
 
-      function getRandomColor() {
-        const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
-        return colors[Math.floor(Math.random() * colors.length)];
+      // ゲームオーバー表示
+      function drawGameOver() {
+        context.font = "36px Arial";
+        context.fillStyle = "#0095DD";
+        context.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
       }
 
-      function createFirework() {
-        const firework = new Firework();
-        fireworks.push(firework);
-      }
-
-      function updateFireworks() {
-        for (let i = fireworks.length - 1; i >= 0; i--) {
-          fireworks[i].update();
-          if (fireworks[i].opacity <= 0) {
-            fireworks.splice(i, 1);
-          }
-        }
-      }
-
-      function drawFireworks() {
+      // ゲームのメインループ
+      function draw() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        for (const firework of fireworks) {
-          firework.draw();
+        drawBricks();
+        drawBall();
+        drawPaddle();
+        drawScore();
+        collisionDetection();
+
+        if (rightPressed && paddleX < canvas.width - paddleWidth) {
+          paddleX += paddleSpeed;
+        } else if (leftPressed && paddleX > 0) {
+          paddleX -= paddleSpeed;
         }
+
+        ballX += ballDX;
+        ballY += ballDY;
+
+        // ボールの壁とパドルの当たり判定
+        if (ballX + ballDX > canvas.width - ballRadius || ballX + ballDX < ballRadius) {
+          ballDX = -ballDX;
+        }
+        if (ballY + ballDY < ballRadius) {
+          ballDY = -ballDY;
+        } else if (
+          ballY + ballDY > canvas.height - ballRadius - paddleHeight &&
+          ballX > paddleX &&
+          ballX < paddleX + paddleWidth
+        ) {
+          ballDY = -ballDY;
+        } else if (ballY + ballDY > canvas.height - ballRadius) {
+          // ゲームオーバー
+          drawGameOver();
+          return;
+        }
+
+        requestAnimationFrame(draw);
       }
 
-      setInterval(createFirework, 2000);
-
-      function animate() {
-        updateFireworks();
-        drawFireworks();
-        requestAnimationFrame(animate);
-      }
-
-      animate();
+      draw();
     </script>
   </body>
 </html>
