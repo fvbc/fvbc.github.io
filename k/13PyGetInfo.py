@@ -37,6 +37,7 @@ company_info = []
 # 直近半年のデータを格納するディクショナリ
 ohlc_data = {}
 
+cs  = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'IPAexGothic'})
 
 print("<info> 繰り返し処理開始。")
 for symbol in symbols:
@@ -73,6 +74,18 @@ for symbol in symbols:
   data = yf.download(symbol, start=start_date, end=end_date)
   ohlc_data[symbol] = data
 
+  print("<info>追加部分：チャート作成処理")
+
+
+  # ローソク足チャートの画像を作成して保存・表示
+  for symbol, data in ohlc_data.items():
+    mpf.plot(data, type="candle",title=f'{symbol} 新規Candlestick Chart (Last 6 Months)',ylabel="株価", ylabel_lower="出来高", volume=True,
+             savefig=f'k/img/{symbol}_candlestick_chart.png', style=cs)
+    chart_image = f'k/img/{symbol}_candlestick_chart.png'
+    display(HTML(f'<img src="{chart_image}">'))
+
+  print('ローソク足チャート画像が生成され、表示されました。')
+
   # 負荷軽減のための待機
   time.sleep(1)
 
@@ -101,18 +114,18 @@ df_info.to_csv(info_file, index=False, encoding='utf-8')
 print(f'銘柄情報が {info_file} に保存されました.')
 
 #cs  = mpf.make_mpf_style(rc={"font.family":'IPAexGothic'})
-cs  = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'IPAexGothic'})
+#cs  = mpf.make_mpf_style(base_mpf_style='yahoo', rc={"font.family":'IPAexGothic'})
 
 # ローソク足チャートの画像を作成して保存・表示
-for symbol, data in ohlc_data.items():
+#for symbol, data in ohlc_data.items():
 #    mpf.plot(data, type='candle', style='yahoo', title=f'{symbol} 価格Candlestick Chart (Last 6 Months)',
-    mpf.plot(data, type="candle",title=f'{symbol} 価格Candlestick Chart (Last 6 Months)',ylabel="株価", ylabel_lower="出来高", volume=True,
+#    mpf.plot(data, type="candle",title=f'{symbol} 価格Candlestick Chart (Last 6 Months)',ylabel="株価", ylabel_lower="出来高", volume=True,
 #             savefig=f'k/img/{symbol}_candlestick_chart.png', ylabel_lower='Volume', style=cs)
-             savefig=f'k/img/{symbol}_candlestick_chart.png', style=cs)
+#             savefig=f'k/img/{symbol}_candlestick_chart.png', style=cs)
 #             savefig=f'k/img/{symbol}_candlestick_chart.png')
-    chart_image = f'k/img/{symbol}_candlestick_chart.png'
-    display(HTML(f'<img src="{chart_image}">'))
+#    chart_image = f'k/img/{symbol}_candlestick_chart.png'
+#    display(HTML(f'<img src="{chart_image}">'))
 
-print('ローソク足チャート画像が生成され、表示されました。')
+#print('ローソク足チャート画像が生成され、表示されました。')
 
 print("終わり")
