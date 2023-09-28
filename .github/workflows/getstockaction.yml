@@ -2,9 +2,10 @@ name: getstock
 
 
 on:
-  schedule:
-    - cron:  '0 21 26 9 *'
-
+#  schedule:
+#    - cron:  '0 21 26 9 *'
+  workflow_dispatch:
+  
 jobs:
   getstock:
     runs-on: ubuntu-latest
