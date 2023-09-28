@@ -8,7 +8,7 @@ name: getstock
 #  workflow_dispatch:
 
 #jobs:
-#  numpy-test:
+#  getstock:
 #    runs-on: ubuntu-latest
 #    steps:
 #      - uses: actions/checkout@v2
