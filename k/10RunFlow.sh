@@ -1,4 +1,4 @@
 bash k/11PreInstallPythonMod.sh
-python k/11PreInstallPythonMod.sh
-bash k/13PyGetInfo.py
+python k/13PyGetInfo.py
+bash k/30AfterGitCom.sh
 
