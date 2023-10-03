@@ -26,8 +26,8 @@ jobs:
           python k/13PyGetInfo.py
       - name: git Setting
         run:
-          git config --global user.name "fvbc"
-          git config --global user.email "fukuokamachivbc@gmail.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Commit files
         run: 
           git add .
