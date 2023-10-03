@@ -24,3 +24,14 @@ jobs:
         run:
           pwd
           python k/13PyGetInfo.py
+      - name: git Setting
+        run:
+          git config --local user.email "fukuokamachivbc@gmail.com"
+          git config --local user.name "fvbc"
+      - name: Commit files
+        run: 
+          git add .
+          git commit -m "WithGithubActions"
+          git pull
+          git push origin master
+          
