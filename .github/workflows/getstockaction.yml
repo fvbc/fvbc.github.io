@@ -24,7 +24,7 @@ jobs:
         run: pwd
       - name: Run Python
         run:
-          python k/13PyGetInfo.py
+          python k/13PyGetInfo.py;
       - name: Commit to github
         run:
           git config user.name  "${GITHUB_ACTOR}";
