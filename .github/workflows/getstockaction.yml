@@ -2,9 +2,9 @@ name: getstock
 
 
 on:
-#  schedule:
-#    - cron:  '0 21 26 9 *'
-  workflow_dispatch:
+  schedule:
+    - cron:  '30 16 * * 1-5'
+#  workflow_dispatch:
   
 jobs:
   getstock:
