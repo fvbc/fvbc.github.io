@@ -31,10 +31,10 @@ jobs:
           cat k/index.html;
       - name: Commit to github
         run:
-          git config user.name  "fvbc"
-          git config user.email "fukuokamachivbc@gmail.com"
-          git add .
-          git commit -m "WithGithubActions"
-          git pull
-          git push
+          git config user.name  "fvbc";
+          git config user.email "fukuokamachivbc@gmail.com";
+          git add .;
+          git commit -m "WithGithubActions";
+          git pull;
+          git push;
           
