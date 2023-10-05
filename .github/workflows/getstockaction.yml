@@ -27,9 +27,8 @@ jobs:
           python k/13PyGetInfo.py
       - name: Commit to github
         run:
-          ls
-          cat k/index.html
           ls;
+          cat k/index.html;
       - name: Commit to github
         run:
           git config user.name  "fvbc"
