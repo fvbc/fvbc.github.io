@@ -20,7 +20,7 @@ jobs:
         run: python -V
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Install dependencies
+      - name: Check Working Directory
         run: pwd
       - name: Run Python
         run:
