@@ -34,8 +34,8 @@ import re
 print("処理開始")
 
 # 出力ファイルの指定
-#OutFileName = "k/index.html"
-OutFileName = "/workspaces/fvbc.github.io/k/index.html"
+OutFileName = "k/index.html"
+#OutFileName = "/workspaces/fvbc.github.io/k/index.html"
 
 
 HtmlBody = "<html>\n<head>\n<title>GetInfoooooo!</title>\n</head>\n<body>\n"
@@ -166,11 +166,11 @@ for symbol in symbols:
   print(f"\n【デバッグエリア】変数「StockName」→{StockName}")
   time.sleep(1)
   mpf.plot(data, type="candle",title=f'{symbol} {StockName}日足6ヶ月Chart',ylabel="株価", ylabel_lower="出来高", volume=True,
-           savefig=f'/workspaces/fvbc.github.io/k/img/{symbol}_candlestick_chart.png', style=cs)
-#           savefig=f'k/img/{symbol}_candlestick_chart.png', style=cs)
+#           savefig=f'/workspaces/fvbc.github.io/k/img/{symbol}_candlestick_chart.png', style=cs)
+           savefig=f'k/img/{symbol}_candlestick_chart.png', style=cs)
            
-  chart_image = f'/workspaces/fvbc.github.io/k/img/{symbol}_candlestick_chart.png'
-#  chart_image = f'k/img/{symbol}_candlestick_chart.png'
+#  chart_image = f'/workspaces/fvbc.github.io/k/img/{symbol}_candlestick_chart.png'
+  chart_image = f'k/img/{symbol}_candlestick_chart.png'
 
   display(HTML(f'<img src="{chart_image}">'))
   
@@ -200,8 +200,8 @@ df_info = pd.DataFrame(company_info, columns=['コード', '銘柄名', '業種�
 display(HTML(df_info.to_html(escape=False, index=False)))
 
 # 生成した銘柄情報をCSVファイルとして保存
-info_file = '/workspaces/fvbc.github.io/k/company_info.csv'
-#info_file = 'k/company_info.csv'
+#info_file = '/workspaces/fvbc.github.io/k/company_info.csv'
+info_file = 'k/company_info.csv'
 
 
 
