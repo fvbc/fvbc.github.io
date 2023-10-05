@@ -25,12 +25,15 @@ jobs:
       - name: Run Python
         run:
           python k/13PyGetInfo.py
-      - name: git Setting
+      - name: Commit to github
         run:
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-      - name: Commit files
-        run: 
+          ls
+          cat k/index.html
+          ls;
+      - name: Commit to github
+        run:
+          git config user.name  "fvbc"
+          git config user.email "fukuokamachivbc@gmail.com"
           git add .
           git commit -m "WithGithubActions"
           git pull
