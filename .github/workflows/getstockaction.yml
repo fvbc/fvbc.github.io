@@ -27,12 +27,8 @@ jobs:
           python k/13PyGetInfo.py
       - name: Commit to github
         run:
-          ls;
-          cat k/index.html;
-      - name: Commit to github
-        run:
-          git config user.name  "fvbc";
-          git config user.email "fukuokamachivbc@gmail.com";
+          git config user.name  "${GITHUB_ACTOR}";
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com";
           git add .;
           git commit -m "WithGithubActions";
           git pull;
