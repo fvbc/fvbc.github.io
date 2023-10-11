@@ -2,3 +2,4 @@ japanize-matplotlib
 mplfinance
 yfinance
 ipython
+arrow
