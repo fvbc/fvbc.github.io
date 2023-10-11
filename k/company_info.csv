@@ -1,5 +1,135 @@
 コード,銘柄名,業種名,次回権利付き確定日,前日終値,予想配当利回り
-1518,"Mitsui Matsushima Holdings Co., Ltd.",Energy,1711584000,2582.0,0.0305
-1605,Inpex Corporation,Energy,1703721600,1963.0,0.0356
-1419,"Tama Home Co., Ltd.",Consumer Cyclical,1717027200,3445.0,0.106000006
-1719,Hazama Ando Corporation,Industrials,1711584000,1112.0,0.0529
+1301,"Kyokuyo Co., Ltd.",Consumer Defensive,1711584000,3925.0,0.0231
+1414,"SHO-BOND Holdings Co.,Ltd.",Industrials,1703721600,5826.0,0.0253
+1419,"Tama Home Co., Ltd.",Consumer Cyclical,1717027200,3475.0,0.1079
+1420,Sanyo Homes Corporation,Consumer Cyclical,1711584000,723.0,0.0692
+1518,"Mitsui Matsushima Holdings Co., Ltd.",Energy,1711584000,2702.0,0.0312
+1605,Inpex Corporation,Energy,1703721600,2081.0,0.038599998
+1663,K&O Energy Group Inc.,Utilities,1703721600,2649.0,0.0135
+1719,Hazama Ando Corporation,Industrials,1711584000,1168.0,0.0537
+1766,Token Corporation,Real Estate,1714089600,7840.0,0.0322
+1801,Taisei Corporation,Industrials,1711584000,5211.0,0.0254
+1802,Obayashi Corporation,Industrials,1711584000,1341.5,0.0324
+1820,"Nishimatsu Construction Co., Ltd.",Industrials,1711584000,3616.0,0.0514
+1911,"Sumitomo Forestry Co., Ltd.",Consumer Cyclical,1703721600,3715.0,0.0356
+1925,"Daiwa House Industry Co., Ltd.",Real Estate,1711584000,4069.0,0.036
+1928,"Sekisui House, Ltd.",Consumer Cyclical,1706572800,2869.0,0.0417
+1934,Yurtec Corporation,Industrials,1711584000,985.0,0.028399998
+1938,"Nippon Rietec Co.,Ltd.",Technology,1711584000,1300.0,0.0233
+1941,Chudenko Corporation,Industrials,1711584000,2414.0,0.0442
+1944,Kinden Corporation,Industrials,1711584000,2175.5,0.0187
+1951,"EXEO Group, Inc.",Industrials,1711584000,3068.0,0.0401
+1952,"Shin Nippon Air Technologies Co., Ltd.",Industrials,1711584000,2387.0,0.0419
+2053,"Chubu Shiryo Co., Ltd.",Consumer Defensive,1711584000,1121.0,0.0309
+2114,Fuji Nihon Seito Corporation,Consumer Defensive,1711584000,961.0,0.0312
+2229,"Calbee, Inc.",Consumer Defensive,1711584000,2756.0,0.0392
+2269,"Meiji Holdings Co., Ltd.",Consumer Defensive,1711584000,3757.0,0.0253
+2270,"MEGMILK SNOW BRAND Co.,Ltd.",Consumer Defensive,1711584000,2310.0,0.025999999
+2331,"Sohgo Security Services Co.,Ltd.",Industrials,1711584000,893.6,0.019199999
+2337,Ichigo Inc.,Real Estate,1709078400,327.0,0.0498
+2353,"NIPPON PARKING DEVELOPMENT Co.,Ltd.",Industrials,1722297600,207.0,0.052399997
+2393,"Nippon Care Supply Co., Ltd.",Industrials,1711584000,1682.0,0.0832
+2461,"FAN Communications, Inc.",Communication Services,1703721600,398.0,0.096
+2503,"Kirin Holdings Company, Limited",Consumer Defensive,1703721600,2092.0,0.033099998
+2531,Takara Holdings Inc.,Consumer Defensive,1711584000,1259.0,0.0217
+2540,"Yomeishu Seizo Co.,Ltd.",Consumer Defensive,1711584000,1859.0,0.024400001
+2670,"ABC-Mart,Inc.",Consumer Cyclical,1709078400,2670.0,0.0217
+2676,"Takachiho Koheki Co.,Ltd.",Industrials,1711584000,3270.0,0.043899998
+2871,Nichirei Corporation,Consumer Defensive,1711584000,3305.0,0.0229
+3002,Gunze Limited,Consumer Cyclical,1711584000,4570.0,0.0328
+3003,"Hulic Co., Ltd.",Real Estate,1703721600,1374.5,0.0335
+3105,Nisshinbo Holdings Inc.,Industrials,1703721600,1104.5,0.0335
+3106,Kurabo Industries Ltd.,Industrials,1711584000,2418.0,0.0294
+3109,Shikibo Ltd.,Consumer Cyclical,1711584000,1081.0,0.0939
+3167,TOKAI Holdings Corporation,Industrials,1711584000,936.0,0.0342
+3183,"WIN-Partners Co., Ltd.",Healthcare,1711584000,1095.0,0.0913
+3244,"Samty Co., Ltd.",Real Estate,1701216000,2346.0,0.0387
+3289,Tokyu Fudosan Holdings Corporation,Real Estate,1711584000,923.2,0.030299999
+3291,"Iida Group Holdings Co., Ltd.",Consumer Cyclical,1711584000,2428.0,0.037100002
+3407,Asahi Kasei Corporation,Basic Materials,1711584000,921.1,0.0396
+3465,"Ki-Star Real Estate Co.,Ltd",Real Estate,1711584000,4570.0,0.051599998
+3489,"FaithNetwork Co.,Ltd",Real Estate,1711584000,1403.0,0.1012
+3738,T-Gaia Corporation,Communication Services,1711584000,1774.0,0.0423
+3941,"Rengo Co., Ltd.",Consumer Cyclical,1711584000,1006.0,0.0239
+4008,"Sumitomo Seika Chemicals Company, Limited.",Basic Materials,1711584000,4555.0,0.044499997
+4021,Nissan Chemical Corporation,Basic Materials,1711584000,6457.0,0.0297
+4041,"Nippon Soda Co., Ltd.",Basic Materials,1711584000,5430.0,0.0452
+4042,Tosoh Corporation,Basic Materials,1711584000,1893.5,0.0434
+4044,"Central Glass Co., Ltd.",Basic Materials,1711584000,2978.0,0.038599998
+4063,"Shin-Etsu Chemical Co., Ltd.",Basic Materials,1711584000,4368.0,0.0229
+4118,Kaneka Corporation,Basic Materials,1711584000,3784.0,0.0295
+4151,"Kyowa Kirin Co., Ltd.",Healthcare,1703721600,2592.0,0.0208
+4182,"Mitsubishi Gas Chemical Company, Inc.",Basic Materials,1711584000,2004.0,0.040799998
+4189,"KH Neochem Co., Ltd.",Basic Materials,1703721600,2259.0,0.0398
+4204,"Sekisui Chemical Co., Ltd.",Industrials,1711584000,2103.5,0.031400003
+4208,UBE Corporation,Basic Materials,1711584000,2357.0,0.0431
+4272,"Nippon Kayaku Co., Ltd.",Basic Materials,1711584000,1283.0,0.035099998
+4410,"Harima Chemicals Group, Inc.",Basic Materials,1711584000,819.0,0.052399997
+4452,Kao Corporation,Consumer Defensive,1703721600,5508.0,0.0272
+4502,Takeda Pharmaceutical Company Limited,Healthcare,1711584000,4578.0,0.0419
+4503,Astellas Pharma Inc.,Healthcare,1711584000,2059.5,0.034
+4507,"Shionogi & Co., Ltd.",Healthcare,1711584000,6630.0,0.023
+4540,Tsumura & Co.,Healthcare,1711584000,2786.5,0.0232
+4551,"Torii Pharmaceutical Co., Ltd.",Healthcare,1703721600,3870.0,0.025799999
+4665,"Duskin Co., Ltd.",Consumer Cyclical,1711584000,3344.0,0.0234
+4968,"Arakawa Chemical Industries, Ltd.",Basic Materials,1711584000,1022.0,0.047
+5020,"ENEOS Holdings, Inc.",Energy,1711584000,549.2,0.0401
+5021,"Cosmo Energy Holdings Co., Ltd.",Energy,1711584000,4988.0,0.0523
+5101,"The Yokohama Rubber Company, Limited",Consumer Cyclical,1703721600,3001.0,0.0227
+5122,"Okamoto Industries, Inc.",Basic Materials,1711584000,5260.0,0.0214
+5185,"Fukoku Co.,Ltd.",Consumer Cyclical,1711584000,1411.0,0.039
+5192,Mitsuboshi Belting Ltd.,Industrials,1711584000,4475.0,0.056999996
+5201,AGC Inc.,Basic Materials,1703721600,5086.0,0.0419
+5208,"Arisawa Mfg. Co., Ltd.",Technology,1711584000,1088.0,0.0469
+5332,Toto Ltd.,Industrials,1711584000,3794.0,0.026600001
+5334,"Niterra Co., Ltd.",Consumer Cyclical,1711584000,3352.0,0.041100003
+5706,"Mitsui Mining & Smelting Co., Ltd.",Industrials,1711584000,3764.0,0.0382
+5938,LIXIL Corporation,Industrials,1711584000,1701.0,0.0535
+5947,Rinnai Corporation,Consumer Cyclical,1711584000,2834.5,0.0214
+5985,Suncall Corporation,Consumer Cyclical,1711584000,489.0,0.0416
+6089,"Will Group, Inc.",Industrials,1711584000,1097.0,0.082100004
+6257,"Fujishoji Co.,Ltd.",Consumer Cyclical,1711584000,1295.0,0.0458
+6268,Nabtesco Corporation,Industrials,1703721600,2730.0,0.0299
+6278,Union Tool Co.,Industrials,1703721600,3865.0,0.0219
+6284,"Nissei ASB Machine Co., Ltd.",Industrials,1695859200,4570.0,0.048600003
+6384,"Showa Shinku Co., Ltd.",Industrials,1711584000,1370.0,0.102
+6454,"Max Co., Ltd.",Industrials,1711584000,2628.0,0.0297
+6486,"Eagle Industry Co.,Ltd.",Industrials,1711584000,1675.0,0.0428
+6625,JALCO Holdings Inc.,Technology,1711584000,208.0,0.0577
+7164,"ZENKOKU HOSHO Co.,Ltd.",Financial Services,1711584000,4955.0,0.0694
+7272,"Yamaha Motor Co., Ltd.",Consumer Cyclical,1703721600,3818.0,0.038
+7278,EXEDY Corporation,Consumer Cyclical,1711584000,2600.0,0.0477
+7433,"Hakuto Co., Ltd.",Technology,1711584000,5200.0,0.0548
+7480,Suzuden Corporation,Industrials,1711584000,2190.0,0.056900002
+7840,"France Bed Holdings Co.,Ltd.",Consumer Cyclical,1711584000,1212.0,0.0347
+8001,ITOCHU Corporation,Industrials,1711584000,5547.0,0.028800001
+8058,Mitsubishi Corporation,Industrials,1711584000,7129.0,0.0291
+8173,"Joshin Denki Co., Ltd.",Consumer Cyclical,1711584000,2366.0,0.0634
+8306,"Mitsubishi UFJ Financial Group, Inc.",Financial Services,1711584000,1260.0,0.0325
+8309,"Sumitomo Mitsui Trust Holdings, Inc.",Financial Services,1711584000,5760.0,0.0392
+8316,"Sumitomo Mitsui Financial Group, Inc.",Financial Services,1711584000,7464.0,0.0335
+8341,"The 77 Bank, Ltd.",Financial Services,1711584000,3270.0,0.033299997
+8354,"Fukuoka Financial Group, Inc.",Financial Services,1711584000,3740.0,0.0307
+8411,"Mizuho Financial Group, Inc.",Financial Services,1711584000,2552.0,0.0372
+8418,"Yamaguchi Financial Group, Inc.",Financial Services,1711584000,1320.5,0.0343
+8425,"Mizuho Leasing Company, Limited",Financial Services,1711584000,4820.0,0.0352
+8473,"SBI Holdings, Inc.",Financial Services,1680134400,3202.0,0.0479
+8566,"Ricoh Leasing Company, Ltd.",Financial Services,1711584000,4425.0,0.0346
+8584,"JACCS Co., Ltd.",Financial Services,1711584000,5090.0,0.039300002
+8593,Mitsubishi HC Capital Inc.,Financial Services,1711584000,993.0,0.0383
+8630,"Sompo Holdings, Inc.",Financial Services,1711584000,6395.0,0.048299998
+8725,"MS&AD Insurance Group Holdings, Inc.",Financial Services,1711584000,5590.0,0.0429
+8917,"First Juken Co., Ltd.",Consumer Cyclical,1698624000,1218.0,0.0354
+8934,"Sun Frontier Fudousan Co., Ltd.",Real Estate,1711584000,1527.0,0.0341
+8999,Grandy House Corporation,Real Estate,1711584000,648.0,0.0988
+9432,Nippon Telegraph and Telephone Corporation,Communication Services,1711584000,176.5,0.028900001
+9433,KDDI Corporation,Communication Services,1711584000,4570.0,0.0312
+9434,SoftBank Corp.,Communication Services,1711584000,1692.5,0.0513
+9513,"Electric Power Development Co., Ltd.",Utilities,1711584000,2382.5,0.0387
+9733,Nagase Brothers Inc.,Consumer Defensive,1711584000,1865.0,0.1082
+9795,"Step Co.,Ltd.",Consumer Defensive,1695859200,1724.0,0.053400002
+9852,"CB GROUP MANAGEMENT Co., Ltd.",Consumer Defensive,1711584000,3880.0,0.0517
+9869,"Kato Sangyo Co., Ltd.",Consumer Defensive,1695859200,3950.0,0.0241
+9880,Innotech Corporation,Technology,1711584000,1586.0,0.044899996
+9882,Yellow Hat Ltd.,Consumer Cyclical,1711584000,1844.0,0.0359
+9997,"Belluna Co., Ltd.",Consumer Cyclical,1711584000,675.0,0.0311
