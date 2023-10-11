@@ -4,7 +4,7 @@ name: getstock
 on:
   schedule:
     - cron:  '30 12 * * 1-5'
-#  workflow_dispatch:
+  workflow_dispatch:
   
 jobs:
   getstock:
