@@ -29,9 +29,16 @@ for FeedURL in FeedList:
   soup = BeautifulSoup(HTMLStr, 'lxml-xml')
 
   # アイテムの分析とHTMLの作成
+  # タイトル
+  HtmlBody += "<p>====================================</p>\n"
+  HtmlBody += f"<p><a href=\"{soup.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\"> 🏐 {soup.title.string}<\a></p><br>\n"
+  HtmlBody += "<p>====================================</p>\n"
+
   for item in soup.findAll('item'):
 #    print(f"<a href=\"{item.link.string}\">{item.title.string}</a>")
-    HtmlBody += f"<p><a href=\"{item.link.string}\">{item.title.string}</a></p><br><br>\n"
+    HtmlBody += f"<p><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">{item.title.string}</a></p><br>\n"
+
+  HtmlBody += "<br>\n"
 
 HtmlBody += "\n</body>\n</html>\n"
 print(HtmlBody)
