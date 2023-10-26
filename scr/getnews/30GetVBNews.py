@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 # main
 
 OutFile = 'vbnews.html'
-HtmlBody = "<html>\n<head>\n<title>Volleyball News</title>\n</head>\n<body>\n"
+HtmlBody = "<html>\n<head>\n<title>Volleyball News</title>\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n"
 
 JPNow = arrow.now('Asia/Tokyo')
 WeekList = ['日','月','火','水','木','金','土']
