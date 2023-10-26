@@ -1,4 +1,0 @@
-
-white-output "aaa"
-
-
