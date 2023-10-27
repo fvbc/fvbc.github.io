@@ -30,9 +30,9 @@ for FeedURL in FeedList:
 
   # アイテムの分析とHTMLの作成
   # タイトル
-  HtmlBody += "<p>====================================</p>\n"
-  HtmlBody += f"<p><a href=\"{soup.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\"> 🏐 {soup.title.string}</a></p><br>\n"
-  HtmlBody += "<p>====================================</p>\n"
+  HtmlBody += "<p>====================================<br>\n"
+  HtmlBody += f"<a href=\"{soup.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\"> 🏐 {soup.title.string}</a><br>\n"
+  HtmlBody += "====================================</p>\n"
 
   for item in soup.findAll('item'):
 #    print(f"<a href=\"{item.link.string}\">{item.title.string}</a>")
