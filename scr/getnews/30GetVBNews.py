@@ -33,15 +33,19 @@ for FeedURL in FeedList:
   HtmlBody += "<p>====================================<br>\n"
   HtmlBody += f"<a href=\"{soup.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\"> 🏐 {soup.title.string}</a><br>\n"
   HtmlBody += "====================================</p>\n"
+  HtmlBody += "<ul>\n"
 
   for item in soup.findAll('item'):
 #    print(f"<a href=\"{item.link.string}\">{item.title.string}</a>")
-    HtmlBody += f"<p><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">{item.title.string}</a></p><br>\n"
-
+#    HtmlBody += f"<p><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">{item.title.string}</a></p><br>\n"
+    HtmlBody += f"  <li><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">\n  {item.title.string}</a><li>\n"
+    DescriStr = item.description.string.replace('\n','').replace('\u3000','')
+    HtmlBody += f"  <p>　{DescriStr}...</p>\n"
+  HtmlBody += "</ul>"
   HtmlBody += "<br>\n"
 
 HtmlBody += "\n</body>\n</html>\n"
-print(HtmlBody)
+# print(HtmlBody)
 
 # 文字列をHTMLファイルに書き出し
 with open(OutFile, "w") as file:
