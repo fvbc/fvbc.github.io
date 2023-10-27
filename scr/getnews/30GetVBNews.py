@@ -38,7 +38,7 @@ for FeedURL in FeedList:
   for item in soup.findAll('item'):
 #    print(f"<a href=\"{item.link.string}\">{item.title.string}</a>")
 #    HtmlBody += f"<p><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">{item.title.string}</a></p><br>\n"
-    HtmlBody += f"  <li><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">\n  {item.title.string}</a><li>\n"
+    HtmlBody += f"  <li><a href=\"{item.link.string}\" target=\"_blank\" rel=\"noopener noreferrer\">\n  {item.title.string}</a></li>\n"
     DescriStr = item.description.string.replace('\n','').replace('\u3000','')
     HtmlBody += f"  <p>　{DescriStr}...</p>\n"
   HtmlBody += "</ul>"
