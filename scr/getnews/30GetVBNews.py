@@ -15,7 +15,7 @@ HtmlBody += "<div class=\"bg_pattern Diagonal_v2\"></div>\n"
 
 JPNow = arrow.now('Asia/Tokyo')
 WeekList = ['日','月','火','水','木','金','土']
-HtmlBody += '取得日時: ' + JPNow.format('YYYY/MM/DD ') + WeekList[int(JPNow.format('d'))] + JPNow.format(' HH:mm') + "<br>\n"
+HtmlBody += '更新日時: ' + JPNow.format('YYYY/MM/DD ') + WeekList[int(JPNow.format('d'))] + JPNow.format(' HH:mm') + "<br>\n"
 
 FeedList = ['https://news.yahoo.co.jp/rss/media/getsuv/all.xml', 'https://news.yahoo.co.jp/rss/media/vbm/all.xml']
 
