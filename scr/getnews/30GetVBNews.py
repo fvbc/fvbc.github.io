@@ -7,7 +7,9 @@ from bs4 import BeautifulSoup
 
 # main
 
-OutFile = 'vbnews.html'
+#OutFile = 'vbnews.html'
+OutFile = 'vbinfo.html'
+
 HtmlBody = "<html>\n<head>\n<title>Volleyball News</title>\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n"
 HtmlBody += "<div class=\"bg_pattern Diagonal_v2\"></div>\n"
 
