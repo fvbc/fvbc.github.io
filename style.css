@@ -18,7 +18,7 @@ ul li {
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin-bottom: 5px;
   line-height: 1.5;
-  background: #dbebf8;
+  background: #f0f8ff;
   vertical-align: middle;
   color: #505050;
   border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
@@ -47,5 +47,5 @@ ul li:before{
   z-index: -1;
 }
 .Diagonal_v2 {
-  background: repeating-linear-gradient( -45deg, #ffc107, #ffc107 10px, #ffe9a7 10px, #ffe9a7 50px );
+  background: repeating-linear-gradient( -30deg, #ffe137, #ffe137 15px, #fff0b7 25px, #fff0b7 70px );
 }
