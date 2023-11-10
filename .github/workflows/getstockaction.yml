@@ -4,8 +4,8 @@ name: getstock
 on:
   schedule:
 #    - cron:  '30 12 * * 1-5'
-    - cron:  '30 20 * * 0-4'
-  workflow_dispatch:
+#    - cron:  '30 20 * * 0-4'
+#  workflow_dispatch:
   
 jobs:
   getstock:
