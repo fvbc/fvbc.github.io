@@ -42,7 +42,7 @@ ul li:before{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffe9a7;
+  background-color: #fff9b7;
   opacity: 0.4;
   z-index: -1;
 }
