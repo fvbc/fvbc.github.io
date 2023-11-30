@@ -47,5 +47,8 @@ ul li:before{
   z-index: -1;
 }
 .Diagonal_v2 {
+  background: repeating-linear-gradient( -30deg, #fff147, #fff147 15px, #fff0b7 25px, #fff0b7 70px );
+}
+.Diagonal_v2_Org {
   background: repeating-linear-gradient( -30deg, #ffe137, #ffe137 15px, #fff0b7 25px, #fff0b7 70px );
 }
