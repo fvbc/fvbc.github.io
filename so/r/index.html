@@ -21,7 +21,25 @@
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1666901356149-93f2eb3ba5a2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwyMTZ8fHZvbGxleWJhbGwlMjBjaGlsZHJlbnxlbnwwfDB8fHwxNzA1Mjg1MDgxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"/>
 
     <style>
-      
+      /* スマホ用のCSSはメディアクエリの外に記述する */
+      img {
+        width: 100%;
+      }
+
+
+      @media screen and (min-width: 481px) {
+    	  /* 481px以上に適用されるCSS（タブレット用） */
+        img {
+          max-width: 480px;
+      }
+      @media screen and (min-width: 960px) {
+	      /* 960px以上に適用されるCSS（PC用） */
+        img {
+          max-width: 960px;
+        }
+        
+      }
+
     </style>
     
   </head>
