@@ -22,6 +22,7 @@
 
     <style>
       /* スマホ用のCSSはメディアクエリの外に記述する */
+      h1 { color: red; }
       img {
         width: 100%;
       }
@@ -33,7 +34,9 @@
           max-width: 480px;
       }
       @media screen and (min-width: 960px) {
-	      /* 960px以上に適用されるCSS（PC用） */
+        /* 960px以上に適用されるCSS（PC用） */
+        h1 { color: blue; }
+
         img {
           max-width: 960px;
         }
