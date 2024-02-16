@@ -9,22 +9,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
     <style>
-    .topimg{
-      background-color:blue;
-      display:inline-block;
-  }
-  .topimg img{
-      opacity: 0.5;
-      display:block;
-  }
-  .topimg::after{
-      content:"オンラインプログラミング";
-      position:absolute;
-      top:200px;
-      left:100px;
-      font-size:100px;
-      color:red;
-  }
+      @media screen and (max-width: 520px) {
+        .topimg{
+          width: 100%;
+          background-color:rgba(0, 0, 14, 0.067);
+          display:inline-block;
+        }
+        .topimg img{
+          opacity: 0.5;
+          display:block;
+        }
+        .topimg::after{
+          content:"🏐バレーしようぜ🏐";
+          position:absolute;
+          top:200px;
+          left:100px;
+          font-size:100px;
+          color:rgba(10, 85, 170, 0.982);
+        }     
+
+
+      }
+
+      @media screen and (min-width: 960px) {
+        .topimg{
+          background-color:rgba(0, 0, 14, 0.067);
+          display:inline-block;
+        }
+        .topimg img{
+          opacity: 0.5;
+          display:block;
+        }
+        .topimg::after{
+          content:"🏐バレーしようぜ🏐";
+          position:absolute;
+          top:200px;
+          left:100px;
+          font-size:100px;
+          color:rgba(10, 85, 170, 0.982);
+        }     
+      }
+
+
   </style>
 
   </head>
