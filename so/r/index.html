@@ -12,25 +12,51 @@
     <style>
       @media only screen and (max-width: 750px) {
         img { max-width: 100%; }
-      }
+        }
       @media screen and (max-width: 520px) {
-        .topimg{
-          width: 100%;
-          background-color:rgba(0, 0, 14, 0.067);
-          display:inline-block;
+        .mainbox {
+          width: 480px;
           margin: 0 auto;
         }
-        .topimg img{
-          opacity: 0.5;
-          display:block;
+        .topimage {
+          width: 100%;
+          height: 480px;
+          background: url("img/WAF.png");
+          background-size: cover;
+          position: relative;
         }
-        .greeting {
-          position:absolute;
-          top:200px;
-          left:100px;
-          color:rgba(10, 85, 170, 0.982);
-        }     
+        .whitemask{
+          width: 100%;
+          height: 40%;
+          background-color: rgb(255 235 215 / 90%);
+          position: absolute;
+          top: 60%;
+          left: 0;
+          text-align: center;
+          line-height: 100px;
+        }
+        p {
+          line-height: 1;
+        }
+        .fuchidori {
+          font-weight: bold;
+          font-size: 38px;
+          color: rgba(0, 0, 0, 0);
+          text-shadow: 3px 3px 0 #cd5;
+          -webkit-text-stroke: 1px #888;
+          text-stroke: 1px #888;
+          padding: 0 0 10px;
+        }    
+        .fuchidori2 {
+          font-weight: bold;
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0);    
+          text-shadow: 3px 3px 0 #9db;
+          -webkit-text-stroke: 1px #888;
+          text-stroke: 1px #888;
+        }
 
+        
 
       }
 
@@ -58,10 +84,22 @@
   </head>
   <body>
     <header>
-      <div class="topimg">
-        <img src="img/IMG_2754.jpeg" alt="FVBC">
-        <div class="greeting">Valleyしようよ</div>
+  <div class="mainbox">
+    <div class="header">
+      <div class="topimage">
+        <div class="whitemask">
+          <p class="fuchidori">『 Sec情報解析よし 』</p>
+          <p class="fuchidori2">ふく</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+      
+<!--        <img src="img/IMG_2754.jpeg" alt="FVBC">
+        <div class="greeting">Valleyしようよ</div>
+-->
         
       </div>
 
