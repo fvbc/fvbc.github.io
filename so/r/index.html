@@ -84,6 +84,11 @@
         text-stroke: 1px #888;
         vertical-align : middle;
       }
+      .applireq {
+        padding: 4%;
+
+      }
+
       .apply{
         width: 100%;
         height: auto;
@@ -92,15 +97,47 @@
       .qrimage{
         width: 60%;
         height: auto;
+        margin: 0 auto;
       }
       .telimage{
         width: 80%;
         height: auto;
+        margin: 0 auto;
       }
-      .applireq {
-        padding: 4%;
+      .sample_box11 {
+         width: 260px;/* 紙の横幅 100%にすると全幅表示に */
+         padding: 15px;
+         margin: 2em auto;
+         background: #f7f092;/* 紙の色 */
+         color: #000;/* 文字色 */
+         box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+         word-break: break-all;
+      }
+      .sample_box11 p {
+          margin: 0; 
+          padding: 0;
+          font-size: 0.9em;
+      }
+      .sample_box11_tape {
+          width: 50%;
+          height: 35px;
+          margin: -25px auto 0;
+          background: #989898;
+          transform: rotate(-3deg);
+          opacity: 0.1;
+      }
+      .sample_box11_title {
+          text-align: center;
+          font-size: 1.3em!important;
+          margin-top: 10px!important;
+      }
+      .sample_box11_subtitle {
+          text-align: center;
+          font-size: 0.7em!important;
+          margin-bottom: 1em!important;
+      }
 
-      }
+      
 
       @media screen and (min-width: 481px) {
 	/* 481px以上に適用されるCSS（タブレット用） */
@@ -177,9 +214,25 @@
   </header>
 	  
   <main>
+    <!-- お試し -->
+    <div class="sample_box11">
+      <div class="sample_box11_tape"> </div>
+      <p class="sample_box11_title">仲間募集！</p>
+      <p class="sample_box11_subtitle">来たれ未来の日本代表</p>
+      <ul>
+        <li>場所　高岡市福岡B&G海洋センター</li>
+        <li>日時　日曜 9:00 ～ 11:30 火曜 18:30 ～ 20:30</li>
+        <li>対象　小学生1年生～5年生の男女</li>
+      </ul>
+
+      </div>
+    <!-- お試し -->
+
+
+
     <div class="spacer"></div>
     <section>
-      一緒にプレーする仲間を募集中！<br>
+      仲間募集！<br>
       
     </section>
     <section>
