@@ -77,6 +77,8 @@
       .apply{
         width: 100%;
         height: auto;
+        display: grid;
+        place-items: center;
         margin: 0 auto;
       }
       .qrimage{
