@@ -93,7 +93,7 @@
         width: 50%;/* 紙の横幅 100%にすると全幅表示に */
         padding: 15px;
         margin: 2em auto;
-        background: #f7f092;/* 紙の色 */
+        background: #ffeff7;/* 紙の色 */
         color: #000;/* 文字色 */
         box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
         word-break: break-all;
