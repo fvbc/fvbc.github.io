@@ -92,7 +92,7 @@
         margin: 0 auto;
       }
       .sample_box11 {
-        width: 50%;/* 紙の横幅 100%にすると全幅表示に */
+        width: 80%;/* 紙の横幅 100%にすると全幅表示に */
         padding: 15px;
         margin: 2em auto;
         background: #ffeff7;/* 紙の色 */
@@ -115,12 +115,12 @@
       }
       .sample_box11_title {
         text-align: center;
-        font-size: 2.0em!important;
+        font-size: 1.2em!important;
         margin-top: 40px!important;
       }
       .sample_box11_subtitle {
         text-align: center;
-        font-size: 1.0em!important;
+        font-size: 0.8em!important;
         margin-top: 30px!important;
         margin-bottom: 2em!important;
       }
@@ -130,7 +130,7 @@
       .listapp {
         text-align: center;
         list-style:none;
-        font-size: 1.4em!important;
+        font-size: 1.0em!important;
         margin-bottom: 0.5em;
       }
 
