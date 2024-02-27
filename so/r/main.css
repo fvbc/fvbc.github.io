@@ -73,24 +73,6 @@
         padding: 4%;
 
       }
-
-      .apply{
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-        margin: 0 auto;
-      }
-      .qrimage{
-        width: 60%;
-        height: auto;
-        margin: 0 auto;
-      }
-      .telimage{
-        width: 80%;
-        height: auto;
-        margin: 0 auto;
-      }
       .sample_box11 {
         width: 80%;/* 紙の横幅 100%にすると全幅表示に */
         padding: 15px;
@@ -133,8 +115,37 @@
         font-size: 1.0em!important;
         margin-bottom: 0.5em;
       }
-
-      
+      .apply {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+      }
+      .qrarea {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+      }
+      .qrimage {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .telarea {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+      }
+      .telimage {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+      }
 
       @media screen and (min-width: 481px) {
 	/* 481px以上に適用されるCSS（タブレット用） */
