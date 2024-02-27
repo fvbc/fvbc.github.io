@@ -6,12 +6,8 @@
         left: 0;
         width: 100%;
         padding: 20px 40px;
-        background: #eee;
+        background: rgb(255, 230, 110);
         box-sizing: border-box;
-        transition: padding .3s;
-      }
-      #header.scroll {
-        padding: 10px 40px;
       }
       .allarea {
         padding: 12px;
