@@ -146,6 +146,9 @@
         height: auto;
         margin: 0 auto;
       }
+      iframe {
+        width: 100%;
+      }
 
       @media screen and (min-width: 481px) {
 	/* 481px以上に適用されるCSS（タブレット用） */
