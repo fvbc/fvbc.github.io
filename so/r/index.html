@@ -13,13 +13,33 @@
     
     
     <style>
-  </style>
+    </style>
+    <script type="text/javascript">
+      $(function () {
+        var $header = $("#header");
+        $(window).on("load scroll", function () {
+          var value = $(this).scrollTop();
+          if (value > 0) { //スクロールしたら.scroll付与
+            $header.addClass("scroll");
+          } else {
+            $header.removeClass("scroll");
+          }
+        });
+      });
+    </script>
+      
 
   </head>
   <body>
     <header id="header">
-      <p>福岡VBC</p>
-      <p><a href="#applyarea">体験はこちら</a></p>
+      <div class="inner">
+        <p class="logo">COMPANY</p>
+        <ul class="navi">
+          <li><a href="#">選ばれる理由</a></li>
+          <li><a href="#">サービス</a></li>
+          <li><a href="#">制作事例</a></li>
+        </ul>
+      </div>
     </header>
     <div class="allarea">
       <div class="spacer"></div>
