@@ -1,4 +1,18 @@
       /* スマホ用CSS */
+      header {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 40px;
+        background: #eee;
+        box-sizing: border-box;
+        transition: padding .3s;
+      }
+      #header.scroll {
+        padding: 10px 40px;
+      }
       .allarea {
         padding: 12px;
       }
@@ -193,9 +207,10 @@
         left: 0;
         text-align: center;
       }
-      p {
+/*      p {
         line-height: 0;
       }
+*/
       .fuchidori {
         font-weight: bold;
         font-size: 60px;
