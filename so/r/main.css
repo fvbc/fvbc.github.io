@@ -50,9 +50,10 @@
         display: grid;
         place-items: center;
       }
-      p {
+/*      p {
         line-height: 0;
       }
+*/
       .fuchidori {
         font-weight: bold;
         font-size: 24px;
