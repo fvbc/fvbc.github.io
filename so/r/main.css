@@ -139,56 +139,33 @@
         font-size: 1.0em!important;
         margin-bottom: 0.5em;
       }
-      .apply {
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-        margin: 0 auto;
-      }
-      .qrarea {
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-        margin: 0 auto;
-      }
-      .qrimage {
-        width: 60%;
-        height: auto;
-        margin: 0 auto;
-      }
-      .telarea {
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-        margin: 0 auto;
-      }
-      .telimage {
-        width: 60%;
-        height: auto;
-        margin: 0 auto;
-      }
-      .qrbasho{
+      .qrarea{
         width: 100%;
         height: auto;
         background-color: #ffeaea;
       }
-      .qrimg {
+      .qrimage {
         display: block;
         margin: 0 auto;
         max-width: 80%;
         vertical-align: bottom;
       }
-      .telimg {
+      .telimage {
         display: block;
         margin: 0 auto;
         max-width: 80%;
         vertical-align: bottom;
+      }
+      .maparea{
+        width: 100%;
+        height: auto;
+        background-color: #ffeaea;
       }
       iframe {
-        width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        vertical-align: bottom;
       }
 
       @media screen and (min-width: 481px) {
