@@ -1,240 +1,384 @@
-      /* スマホ用CSS */
-      .allarea {
-        padding: 12px;
-      }
+/* スマホ用CSS */
+.allarea {
+  padding: 12px;
+}
 
-      .bodytopbox{
-        width: 100%;
-        height: auto;
-        background-color: aliceblue;
-      }
-      .bodytoptitle{
-        font-size:5vmin;
-        text-align: center;
-      }
+.bodytopbox{
+  width: 100%;
+  height: auto;
+  background-color: aliceblue;
+}
+.bodytoptitle{
+  font-size:5vmin;
+  text-align: center;
+}
 
-      .spacer{
-        width: 100%;
-        height: 10px;
-      }
+.spacer{
+  width: 100%;
+  height: 10px;
+}
 
-      .topmargin {
-        width: auto;
-        height: 2px;
-      }
+.topmargin {
+  width: auto;
+  height: 2px;
+}
 
-      .mainbox {
-        margin-top: 12px;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-      }
+.mainbox {
+  margin-top: 12px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
 
-      .topimage {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-      .topimage img {
-        width: 100%;
-        height: auto;
-      }
-      .whitemask{
-        top: 60%;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        background-color: rgb(255 235 215 / 90%);
-        position: absolute;
-        text-align: center;
-      }
-      .topmsg1{ 
-        position: absolute;
-        top: 0%;
-        width: 100%;
-        height: 70%;
-        display: grid;
-        place-items: center;
-      }
-      .topmsg2{
-        position: absolute;
-        top: 60%;
-        width: 100%;
-        height: 30%;
-        display: grid;
-        place-items: center;
-      }
-/*      p {
+.topimage {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.topimage img {
+  width: 100%;
+  height: auto;
+}
+.whitemask{
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgb(255 235 215 / 90%);
+  position: absolute;
+  text-align: center;
+}
+.topmsg1{ 
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  place-items: center;
+}
+.topmsg2{
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 30%;
+  display: grid;
+  place-items: center;
+}
+/* p {
+  line-height: 0;
+}
+*/
+.fuchidori {
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 3px 3px 0 #cd5;
+  -webkit-text-stroke: 1px #888;
+  text-stroke: 1px #888;
+}
+.fuchidori2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0);    
+  text-shadow: 3px 3px 0 #9db;
+  -webkit-text-stroke: 1px #888;
+  text-stroke: 1px #888;
+}
+.commentbox1 {
+  padding: 0.2em 0.5em;
+  margin: 2em 0;
+  color: #565656;
+  background: #ffeaea;
+  box-shadow: 0px 0px 0px 10px #ffeaea;
+  border: dashed 2px #ffc3c3;
+  border-radius: 8px;
+}
+.commentbox1 p {
+   margin: 0; 
+    padding: 0;
+}
+.applireq {
+  padding: 4%;
+
+}
+.sample_box11 {
+  width: 80%;/* 紙の横幅 100%にすると全幅表示に */
+  padding: 15px;
+  margin: 2em auto;
+  background: #ffeff7;/* 紙の色 */
+  color: #000;/* 文字色 */
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+  word-break: break-all;
+}
+.sample_box11 p {
+  margin: 0; 
+  padding: 0;
+  font-size: 0.9em;
+}
+.sample_box11_tape {
+  width: 50%;
+  height: 35px;
+  margin: -25px auto 0;
+  background: #989898;
+  transform: rotate(-3deg);
+  opacity: 0.1;
+}
+.sample_box11_title {
+  text-align: center;
+  font-size: 1.2em!important;
+  margin-top: 40px!important;
+}
+.sample_box11_subtitle {
+  text-align: center;
+  font-size: 0.8em!important;
+  margin-top: 30px!important;
+  margin-bottom: 2em!important;
+}
+.ulapp {
+  padding-left:0;
+}
+.listapp {
+  text-align: center;
+  list-style:none;
+  font-size: 1.0em!important;
+  margin-bottom: 0.5em;
+}
+.qrarea{
+  width: 100%;
+  height: auto;
+  background-color: #ffeaea;
+}
+.qrimage {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  vertical-align: bottom;
+}
+.telimage {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  vertical-align: bottom;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+}
+
+/* Google Mapのiframe */
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footerarea{
+  text-align: center;
+}
+.footertext{
+  text-align: center;
+}
+
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+}
+
+
+@media screen and (min-width: 960px) {
+  /* 960px以上に適用されるCSS（PC用） */
+  img {
+    max-width: 960px;
+  }
+
+  .allarea {
+    padding: 12px;
+  }
+
+  .bodytopbox{
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+  }
+  .bodytoptitle{
+    font-size:5vmin;
+    text-align: center;
+  }
+
+  .spacer{
+    width: 100%;
+    height: 10px;
+  }
+
+  .topmargin {
+    width: auto;
+    height: 2px;
+  }
+
+  .mainbox {
+    margin-top: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .topimage {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .topimage img {
+    width: 100%;
+    height: auto;
+  }
+  .whitemask{
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(255 235 215 / 90%);
+    position: absolute;
+    text-align: center;
+  }
+  .topmsg1{ 
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    place-items: center;
+  }
+  .topmsg2{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 30%;
+    display: grid;
+    place-items: center;
+  }
+  /*  p {
         line-height: 0;
       }
-*/
-      .fuchidori {
-        font-weight: bold;
-        font-size: 24px;
-        color: rgba(0, 0, 0, 0);
-        text-shadow: 3px 3px 0 #cd5;
-        -webkit-text-stroke: 1px #888;
-        text-stroke: 1px #888;
-      }
-      .fuchidori2 {
-        font-weight: bold;
-        font-size: 18px;
-        color: rgba(0, 0, 0, 0);    
-        text-shadow: 3px 3px 0 #9db;
-        -webkit-text-stroke: 1px #888;
-        text-stroke: 1px #888;
-      }
-      .commentbox1 {
-        padding: 0.2em 0.5em;
-        margin: 2em 0;
-        color: #565656;
-        background: #ffeaea;
-        box-shadow: 0px 0px 0px 10px #ffeaea;
-        border: dashed 2px #ffc3c3;
-        border-radius: 8px;
-    }
+  */
+  .fuchidori {
+    font-weight: bold;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 3px 3px 0 #cd5;
+    -webkit-text-stroke: 1px #888;
+    text-stroke: 1px #888;
+  }
+  .fuchidori2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0);    
+    text-shadow: 3px 3px 0 #9db;
+    -webkit-text-stroke: 1px #888;
+    text-stroke: 1px #888;
+  }
+  .commentbox1 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+  }
     .commentbox1 p {
-        margin: 0; 
-        padding: 0;
-    }
-      .applireq {
-        padding: 4%;
+    margin: 0; 
+    padding: 0;
+  }
+  .applireq {
+    padding: 4%;
 
-      }
-      .sample_box11 {
-        width: 80%;/* 紙の横幅 100%にすると全幅表示に */
-        padding: 15px;
-        margin: 2em auto;
-        background: #ffeff7;/* 紙の色 */
-        color: #000;/* 文字色 */
-        box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
-        word-break: break-all;
-      }
-      .sample_box11 p {
-        margin: 0; 
-        padding: 0;
-        font-size: 0.9em;
-      }
-      .sample_box11_tape {
-        width: 50%;
-        height: 35px;
-        margin: -25px auto 0;
-        background: #989898;
-        transform: rotate(-3deg);
-        opacity: 0.1;
-      }
-      .sample_box11_title {
-        text-align: center;
-        font-size: 1.2em!important;
-        margin-top: 40px!important;
-      }
-      .sample_box11_subtitle {
-        text-align: center;
-        font-size: 0.8em!important;
-        margin-top: 30px!important;
-        margin-bottom: 2em!important;
-      }
-      .ulapp {
-        padding-left:0;
-      }
-      .listapp {
-        text-align: center;
-        list-style:none;
-        font-size: 1.0em!important;
-        margin-bottom: 0.5em;
-      }
-      .qrarea{
-        width: 100%;
-        height: auto;
-        background-color: #ffeaea;
-      }
-      .qrimage {
-        display: block;
-        margin: 0 auto;
-        max-width: 80%;
-        vertical-align: bottom;
-      }
-      .telimage {
-        display: block;
-        margin: 0 auto;
-        max-width: 80%;
-        vertical-align: bottom;
-      }
+  }
+  .sample_box11 {
+    width: 80%;/* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 2em auto;
+    background: #ffeff7;/* 紙の色 */
+    color: #000;/* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+    word-break: break-all;
+  }
+  .sample_box11 p {
+    margin: 0; 
+    padding: 0;
+    font-size: 0.9em;
+  }
+  .sample_box11_tape {
+    width: 50%;
+    height: 35px;
+    margin: -25px auto 0;
+    background: #989898;
+    transform: rotate(-3deg);
+    opacity: 0.1;
+  }
+  .sample_box11_title {
+    text-align: center;
+    font-size: 1.2em!important;
+    margin-top: 40px!important;
+  }
+  .sample_box11_subtitle {
+    text-align: center;
+    font-size: 0.8em!important;
+    margin-top: 30px!important;
+    margin-bottom: 2em!important;
+  }
+  .ulapp {
+    padding-left:0;
+  }
+  .listapp {
+    text-align: center;
+    list-style:none;
+    font-size: 1.0em!important;
+    margin-bottom: 0.5em;
+  }
+  .qrarea{
+    width: 100%;
+    height: auto;
+    background-color: #ffeaea;
+  }
+  .qrimage {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    vertical-align: bottom;
+  }
+  .telimage {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    vertical-align: bottom;
+  }
 
-      .map {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 75%; /* 比率を4:3に固定 */
-      }
-      
-      /* Google Mapのiframe */
-      .map iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+  .map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%; /* 比率を4:3に固定 */
+  }
+  
+  /* Google Mapのiframe */
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 
-      .footerarea{
-        text-align: center;
-      }
-      .footertext{
-        text-align: center;
-      }
-
-      @media screen and (min-width: 481px) {
-	/* 481px以上に適用されるCSS（タブレット用） */
-      }
-
-      @media screen and (min-width: 960px) {
-	/* 960px以上に適用されるCSS（PC用） */
-        img {
-          max-width: 960px;
-        }
-      .mainbox {
-        margin-top: 12px;
-        width: 960px;
-        margin: 0 auto;
-      }
-      .topimage {
-        width: 100%;
-        background: url("img/IMG_2754.jpeg");
-        background-size: cover;
-        position: relative;
-      }
-      .whitemask{
-        width: 100%;
-        height: 40%;
-        background-color: rgb(255 235 215 / 90%);
-        position: absolute;
-        top: 60%;
-        left: 0;
-        text-align: center;
-      }
-/*      p {
-        line-height: 0;
-      }
-*/
-      .fuchidori {
-        font-weight: bold;
-        font-size: 60px;
-        color: rgba(0, 0, 0, 0);
-        text-shadow: 3px 3px 0 #cd5;
-        -webkit-text-stroke: 1px #888;
-        text-stroke: 1px #888;
-        padding: 10 0 10px;
-      }    
-      .fuchidori2 {
-        font-weight: bold;
-        font-size: 40px;
-        color: rgba(0, 0, 0, 0);    
-        text-shadow: 3px 3px 0 #9db;
-        -webkit-text-stroke: 1px #888;
-        text-stroke: 1px #888;
-      }
-    }
-
-	
+  .footerarea{
+    text-align: center;
+  }
+  .footertext{
+    text-align: center;
+  }
+}
