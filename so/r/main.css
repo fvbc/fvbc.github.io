@@ -181,6 +181,12 @@
         max-width: 80%;
         vertical-align: bottom;
       }
+      .telimg {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        vertical-align: bottom;
+      }
       iframe {
         width: 100%;
       }
