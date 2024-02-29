@@ -1,4 +1,8 @@
       /* スマホ用CSS */
+      .allarea {
+        padding: 12px;
+      }
+
       .bodytopbox{
         width: 100%;
         height: auto;
@@ -6,10 +10,7 @@
       }
       .bodytoptitle{
         font-size:5vmin;
-      }
-
-      .allarea {
-        padding: 12px;
+        text-align: center;
       }
 
       .spacer{
@@ -28,7 +29,7 @@
         height: 100%;
         margin: 0 auto;
       }
-      
+
       .topimage {
         width: 100%;
         height: auto;
@@ -169,6 +170,12 @@
         margin: 0 auto;
         max-width: 80%;
         vertical-align: bottom;
+      }
+      .footerarea{
+        text-align: center;
+      }
+      .footertext{
+        text-align: center;
       }
 
       @media screen and (min-width: 481px) {
