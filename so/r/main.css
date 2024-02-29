@@ -1,31 +1,34 @@
       /* スマホ用CSS */
-      header {
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        left: 0;
+      .bodytopbox{
         width: 100%;
-        padding: 10px 20px;
-        background: rgb(255, 230, 110);
-        box-sizing: border-box;
+        height: auto;
+        background-color: aliceblue;
       }
+      .bodytoptitle{
+        font-size:5vmin;
+      }
+
       .allarea {
         padding: 12px;
       }
+
       .spacer{
         width: 100%;
         height: 50px;
       }
+
       .topmargin {
         width: auto;
         height: 2px;
       }
+
       .mainbox {
         margin-top: 12px;
         width: 100%;
         height: 100%;
         margin: 0 auto;
       }
+      
       .topimage {
         width: 100%;
         height: auto;
