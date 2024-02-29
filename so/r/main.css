@@ -170,6 +170,9 @@
         height: auto;
         margin: 0 auto;
       }
+      .qrimg {
+        width: 40%;
+      }
       iframe {
         width: 100%;
       }
