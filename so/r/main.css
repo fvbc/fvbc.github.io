@@ -170,6 +170,11 @@
         height: auto;
         margin: 0 auto;
       }
+      .qrbasho{
+        width: 100%;
+        height: auto;
+        background-color: #ffeaea;
+      }
       .qrimg {
         display: block;
         margin: 0 auto;
