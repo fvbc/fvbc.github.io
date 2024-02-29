@@ -160,17 +160,24 @@
         max-width: 80%;
         vertical-align: bottom;
       }
-      .maparea{
+
+      .map {
+        position: relative;
         width: 100%;
-        height: auto;
-        background-color: #ffeaea;
+        height: 0;
+        padding-top: 75%; /* 比率を4:3に固定 */
       }
-      iframe {
-        display: block;
-        margin: 0 auto;
-        max-width: 80%;
-        vertical-align: bottom;
+      
+      /* Google Mapのiframe */
+      .map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
+
+
       .footerarea{
         text-align: center;
       }
