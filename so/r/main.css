@@ -171,7 +171,8 @@
         margin: 0 auto;
       }
       .qrimg {
-        width: 40%;
+        max-width: 40%;
+        vertical-align:bottom;
       }
       iframe {
         width: 100%;
