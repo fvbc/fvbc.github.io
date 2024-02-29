@@ -15,7 +15,7 @@
 
       .spacer{
         width: 100%;
-        height: 50px;
+        height: 10px;
       }
 
       .topmargin {
@@ -58,7 +58,7 @@
       }
       .topmsg2{
         position: absolute;
-        top: 70%;
+        top: 60%;
         width: 100%;
         height: 30%;
         display: grid;
