@@ -269,7 +269,7 @@
   */
   .fuchidori {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 72px;
     color: rgba(0, 0, 0, 0);
     text-shadow: 3px 3px 0 #cd5;
     -webkit-text-stroke: 1px #888;
@@ -277,7 +277,7 @@
   }
   .fuchidori2 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 48px;
     color: rgba(0, 0, 0, 0);    
     text-shadow: 3px 3px 0 #9db;
     -webkit-text-stroke: 1px #888;
