@@ -269,7 +269,7 @@
   */
   .fuchidori {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 36px;
     color: rgba(0, 0, 0, 0);
     text-shadow: 3px 3px 0 #cd5;
     -webkit-text-stroke: 1px #888;
@@ -277,7 +277,7 @@
   }
   .fuchidori2 {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0);    
     text-shadow: 3px 3px 0 #9db;
     -webkit-text-stroke: 1px #888;
@@ -312,7 +312,7 @@
   .sample_box11 p {
     margin: 0; 
     padding: 0;
-    font-size: 0.9em;
+    font-size: 1.8em;
   }
   .sample_box11_tape {
     width: 50%;
@@ -324,12 +324,12 @@
   }
   .sample_box11_title {
     text-align: center;
-    font-size: 1.2em!important;
+    font-size: 2.4em!important;
     margin-top: 40px!important;
   }
   .sample_box11_subtitle {
     text-align: center;
-    font-size: 0.8em!important;
+    font-size: 1.6em!important;
     margin-top: 30px!important;
     margin-bottom: 2em!important;
   }
@@ -339,7 +339,7 @@
   .listapp {
     text-align: center;
     list-style:none;
-    font-size: 1.0em!important;
+    font-size: 2.0em!important;
     margin-bottom: 0.5em;
   }
   .qrarea{
