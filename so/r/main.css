@@ -293,8 +293,9 @@
     border-radius: 8px;
   }
   .commentbox1 p {
-     margin: 0; 
-      padding: 0;
+    margin: 0; 
+    padding: 0;
+    font-size: 2.0em;
   }
   .applireq {
     padding: 4%;
@@ -342,8 +343,17 @@
     font-size: 2.0em!important;
     margin-bottom: 0.5em;
   }
-  .qrarea{
+  .applyarea{
     width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #f7c6c6;
+  }
+  .qrarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
     height: auto;
     background-color: #ffeaea;
   }
@@ -353,6 +363,13 @@
     max-width: 320px;
     vertical-align: bottom;
   }
+  .telarea{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: auto;
+    background-color: #f7a7a7;  }
   .telimage {
     display: block;
     margin: 0 auto;
@@ -365,15 +382,15 @@
     width: 640px;
     height: 0;
     padding-top: 75%; /* 比率を4:3に固定 */
+    margin: 0 auto;
   }
   
   /* Google Mapのiframe */
   .map iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
   }
   
   .footerarea{
