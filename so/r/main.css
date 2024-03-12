@@ -385,9 +385,6 @@
     margin: 0 auto;
   }
   .map{
-    position: absolute;
-    width: 80%;
-    height: 80%;
     margin: 0 auto;
   }
   /* Google Mapのiframe */
