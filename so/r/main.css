@@ -377,19 +377,23 @@
     vertical-align: bottom;
   }
   
-  .map {
+  .maparea {
     position: relative;
     width: 640px;
     height: 0;
     padding-top: 75%; /* 比率を4:3に固定 */
     margin: 0 auto;
   }
-  
-  /* Google Mapのiframe */
-  .map iframe {
+  .map{
     position: absolute;
     width: 80%;
     height: 80%;
+    margin: 0 auto;
+  }
+  /* Google Mapのiframe */
+  .map iframe {
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
   }
   
