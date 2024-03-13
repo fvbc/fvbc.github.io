@@ -164,7 +164,7 @@
 .map {
   position: relative;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-top: 75%; /* 比率を4:3に固定 */
 }
 
@@ -180,6 +180,13 @@
 .footerarea{
   text-align: center;
 }
+.danmakuarea{
+  text-align: center;
+}
+.danmakuarea img {
+  width: 100%;
+  height: auto;
+}
 .footertext{
   text-align: center;
 }
@@ -192,6 +199,11 @@
 
 @media screen and (min-width: 960px) {
   /* 960px以上に適用されるCSS（PC用） */
+  body {
+    background-image: url("backimg02.png");
+    background-size: 128px;
+    background-repeat: repeat;
+  }
   img {
     max-width: 960px;
   }
@@ -376,11 +388,15 @@
     max-width: 320px;
     vertical-align: bottom;
   }
-  
+  .accessarea{
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+  }
   .maparea {
     position: relative;
     width: 640px;
-    height: 0;
+    height: auto;
     padding-top: 75%; /* 比率を4:3に固定 */
     margin: 0 auto;
   }
@@ -396,6 +412,13 @@
   
   .footerarea{
     text-align: center;
+  }
+  .danmakuarea{
+    text-align: center;
+  }
+  .danmakuarea img {
+    width: 100%;
+    height: auto;
   }
   .footertext{
     text-align: center;
