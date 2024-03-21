@@ -200,7 +200,7 @@
 @media screen and (min-width: 960px) {
   /* 960px以上に適用されるCSS（PC用） */
   body {
-    background-image: url("img/backimg04.png");
+    background-image: url("img/backimg04.jpg");
     background-size: 128px;
     background-repeat: repeat;
   }
