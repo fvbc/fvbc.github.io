@@ -201,7 +201,7 @@
   /* 960px以上に適用されるCSS（PC用） */
   body {
     background-image: url("img/backimg04.jpg");
-    background-size: 128px;
+    background-size: 1280px;
     background-repeat: repeat;
   }
   img {
