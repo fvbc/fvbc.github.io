@@ -181,16 +181,20 @@
   content:"-7124";
 }
 
+/*
 .map {
   width: 100%;
   height: auto;
 }
+*/
 
 /* Google Mapのiframe */
+/*
 .map iframe {
   width: 100%;
   height: 100%;
 }
+*/
 
 .footerarea{
   text-align: center;
@@ -216,7 +220,7 @@
   /* 960px以上に適用されるCSS（PC用） */
   body {
     background-image: url("img/backimg04.jpg");
-    background-size: 1600px;
+    background-size: 20000px;
     background-repeat: repeat;
   }
   img {
