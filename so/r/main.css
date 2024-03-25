@@ -163,14 +163,15 @@
 .telstrbox{
   margin: 20px auto;
   padding: 10px;
+  border: 5px solid pink;
+  border-radius: 10px 50px 10px 50px;
   background-color: #fff;
-  background: repeating-linear-gradient( -45deg, #eaf3f8, #eaf3f8 5px, #fff 5px, #fff 13px );
+  background: repeating-linear-gradient( -45deg, #f3eaf8, #f3eaf8 5px, #fff 5px, #fff 13px );
   margin: 0 auto;
 }
 .telstr{
   font-size: 24px;
   text-align: center;
-
 }
 
 .telstr::before{
