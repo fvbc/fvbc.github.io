@@ -388,6 +388,9 @@
     max-width: 320px;
     vertical-align: bottom;
   }
+  .telstr::before{
+    content:"090-";
+  }
   .accessarea{
     width: 640px;
     height: auto;
