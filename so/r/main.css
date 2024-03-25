@@ -182,7 +182,6 @@
 }
 
 .map {
-  position: relative;
   width: 100%;
   height: auto;
   padding-top: 75%; /* 比率を4:3に固定 */
@@ -190,9 +189,6 @@
 
 /* Google Mapのiframe */
 .map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -221,7 +217,7 @@
   /* 960px以上に適用されるCSS（PC用） */
   body {
     background-image: url("img/backimg04.jpg");
-    background-size: 1280px;
+    background-size: 1600px;
     background-repeat: repeat;
   }
   img {
