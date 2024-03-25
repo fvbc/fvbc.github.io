@@ -125,12 +125,12 @@
 }
 .sample_box11_title {
   text-align: center;
-  font-size: 1.2em!important;
+  font-size: 1.4em!important;
   margin-top: 40px!important;
 }
 .sample_box11_subtitle {
   text-align: center;
-  font-size: 0.8em!important;
+  font-size: 1.0em!important;
   margin-top: 30px!important;
   margin-bottom: 2em!important;
 }
@@ -140,7 +140,7 @@
 .listapp {
   text-align: center;
   list-style:none;
-  font-size: 1.0em!important;
+  font-size: 1.2em!important;
   margin-bottom: 0.5em;
 }
 .qrarea{
@@ -184,7 +184,6 @@
 .map {
   width: 100%;
   height: auto;
-  padding-top: 75%; /* 比率を4:3に固定 */
 }
 
 /* Google Mapのiframe */
