@@ -376,15 +376,12 @@
     margin-bottom: 0.5em;
   }
   .applyarea{
+    display: flex;
     width: 100%;
     height: auto;
-    position: relative;
     background-color: #f7c6c6;
   }
   .qrarea{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 50%;
     height: auto;
     background-color: #ffeaea;
@@ -396,9 +393,6 @@
     vertical-align: bottom;
   }
   .telarea{
-    position: absolute;
-    top: 0;
-    left: 50%;
     width: 50%;
     height: auto;
     background-color: #f7a7a7;  }
@@ -409,7 +403,7 @@
     vertical-align: bottom;
   }
   .telstrbox{
-    width: 480px;
+    width: 80%;
     margin: 20px auto;
     padding: 10px;
     border: 5px solid pink;
