@@ -391,6 +391,10 @@
   .telstr::before{
     content:"090-";
   }
+  .telstr::after{
+    content:"-1234";
+  }
+
   .accessarea{
     width: 640px;
     height: auto;
