@@ -160,6 +160,12 @@
   max-width: 80%;
   vertical-align: bottom;
 }
+.telstr::before{
+  content:"090-";
+}
+.telstr::after{
+  content:"-7124";
+}
 
 .map {
   position: relative;
@@ -392,7 +398,7 @@
     content:"090-";
   }
   .telstr::after{
-    content:"-1234";
+    content:"-7124";
   }
 
   .accessarea{
