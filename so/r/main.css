@@ -389,6 +389,9 @@ body {
     height: auto;
     background-color: #f7c6c6;
   }
+  .applyflex{
+    display: flex;
+  }
   .qrarea{
     width: 50%;
     height: auto;
