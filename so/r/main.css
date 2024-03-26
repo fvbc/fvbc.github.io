@@ -384,7 +384,6 @@ body {
     margin-bottom: 0.5em;
   }
   .applyarea{
-    display: flex;
     width: 100%;
     height: auto;
     background-color: #f7c6c6;
