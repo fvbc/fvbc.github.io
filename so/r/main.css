@@ -1,4 +1,11 @@
-/* スマホ用CSS */
+/* 共通。主にスマホ用CSS */
+
+body {
+  background-image: url("img/backimg04.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
 .allarea {
   padding: 12px;
 }
