@@ -1,0 +1,456 @@
+/* 共通。主にスマホ用CSS */
+
+body {
+  background-image: url("img/backimg04.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.allarea {
+  padding: 12px;
+}
+
+.bodytopbox{
+  width: 100%;
+  height: auto;
+  background-color: aliceblue;
+}
+.bodytoptitle{
+  font-size:5vmin;
+  text-align: center;
+}
+
+.spacer{
+  width: 100%;
+  height: 10px;
+}
+
+.topmargin {
+  width: auto;
+  height: 2px;
+}
+
+.mainbox {
+  margin-top: 12px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.topimage {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.topimage img {
+  width: 100%;
+  height: auto;
+}
+.whitemask{
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgb(255 235 215 / 90%);
+  position: absolute;
+  text-align: center;
+}
+.topmsg1{ 
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  place-items: center;
+}
+.topmsg2{
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 30%;
+  display: grid;
+  place-items: center;
+}
+/* p {
+  line-height: 0;
+}
+*/
+.fuchidori {
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 3px 3px 0 #cd5;
+  -webkit-text-stroke: 1px #888;
+  text-stroke: 1px #888;
+}
+.fuchidori2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0);    
+  text-shadow: 3px 3px 0 #9db;
+  -webkit-text-stroke: 1px #888;
+  text-stroke: 1px #888;
+}
+.commentbox1 {
+  padding: 0.2em 0.5em;
+  margin: 2em 0;
+  color: #565656;
+  background: #ffeaea;
+  box-shadow: 0px 0px 0px 10px #ffeaea;
+  border: dashed 2px #ffc3c3;
+  border-radius: 8px;
+}
+.commentbox1 p {
+   margin: 0; 
+    padding: 0;
+}
+.applireq {
+  padding: 4%;
+
+}
+.sample_box11 {
+  width: 80%;/* 紙の横幅 100%にすると全幅表示に */
+  padding: 15px;
+  margin: 2em auto;
+  background: #ffeff7;/* 紙の色 */
+  color: #000;/* 文字色 */
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+  word-break: break-all;
+}
+.sample_box11 p {
+  margin: 0; 
+  padding: 0;
+  font-size: 0.9em;
+}
+.sample_box11_tape {
+  width: 50%;
+  height: 35px;
+  margin: -25px auto 0;
+  background: #989898;
+  transform: rotate(-3deg);
+  opacity: 0.1;
+}
+.sample_box11_title {
+  text-align: center;
+  font-size: 1.4em!important;
+  margin-top: 40px!important;
+}
+.sample_box11_subtitle {
+  text-align: center;
+  font-size: 1.0em!important;
+  margin-top: 30px!important;
+  margin-bottom: 2em!important;
+}
+.ulapp {
+  padding-left:0;
+}
+.listapp {
+  text-align: center;
+  list-style:none;
+  font-size: 1.2em!important;
+  margin-bottom: 0.5em;
+}
+.qrarea{
+  width: 100%;
+  height: auto;
+  /*  background-color: #ffeaea; */
+}
+.qrimage {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  vertical-align: bottom;
+}
+.telimage {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  vertical-align: bottom;
+}
+.telstrbox{
+  margin: 20px auto;
+  padding: 10px;
+  border: 5px solid pink;
+  border-radius: 10px 50px 10px 50px;
+  background-color: #fff;
+  background: repeating-linear-gradient( -45deg, #f3eaf8, #f3eaf8 5px, #fff 5px, #fff 13px );
+  margin: 0 auto;
+}
+.telstr{
+  font-size: 24px;
+  text-align: center;
+}
+
+.telstr::before{
+  content:"090-";
+}
+.telstr::after{
+  content:"-7124";
+}
+
+/*
+.map {
+  width: 100%;
+  height: auto;
+}
+*/
+
+/* Google Mapのiframe */
+/*
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+*/
+
+.footerarea{
+  text-align: center;
+}
+.danmakuarea{
+  text-align: center;
+}
+.danmakuarea img {
+  width: 100%;
+  height: auto;
+}
+.footertext{
+  text-align: center;
+}
+
+
+@media screen and (min-width: 481px) {
+/* 481px以上に適用されるCSS（タブレット用） */
+
+
+  body {
+    background-image: url("img/backimg04.jpg");
+/*  background-size: 2000px;
+    background-repeat: repeat; */
+    background-size: cover;
+    background-position: 50%;
+  }
+  img {
+    max-width: 960px;
+  }
+
+  .allarea {
+    padding: 12px;
+    width: 960px;
+    margin: 0 auto;
+  }
+  
+  .bodytopbox{
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+  }
+  .bodytoptitle{
+    font-size:5vmin;
+    text-align: center;
+  }
+  
+  .spacer{
+    width: 100%;
+    height: 10px;
+  }
+  
+  .topmargin {
+    width: auto;
+    height: 2px;
+  }
+  
+  .mainbox {
+    margin-top: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .topimage {
+    width: 960px;
+    height: auto;
+    position: relative;
+  }
+  .topimage img {
+    width: 100%;
+    height: auto;
+  }
+  .whitemask{
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(255 235 215 / 90%);
+    position: absolute;
+    text-align: center;
+  }
+  .topmsg1{ 
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 70%;
+    display: grid;
+    place-items: center;
+  }
+  .topmsg2{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 30%;
+    display: grid;
+    place-items: center;
+  }
+  /* p {
+    line-height: 0;
+  }
+  */
+  .fuchidori {
+    font-weight: bold;
+    font-size: 96px;
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 3px 3px 0 #cd5;
+    -webkit-text-stroke: 1px #888;
+    text-stroke: 1px #888;
+  }
+  .fuchidori2 {
+    font-weight: bold;
+    font-size: 66px;
+    color: rgba(0, 0, 0, 0);    
+    text-shadow: 3px 3px 0 #9db;
+    -webkit-text-stroke: 1px #888;
+    text-stroke: 1px #888;
+  }
+  .commentbox1 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+  }
+  .commentbox1 p {
+    margin: 0; 
+    padding: 0;
+    font-size: 2.0em;
+  }
+  .applireq {
+    padding: 4%;
+  
+  }
+  .sample_box11 {
+    width: 640px;/* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 2em auto;
+    background: #ffeff7;/* 紙の色 */
+    color: #000;/* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+    word-break: break-all;
+  }
+  .sample_box11 p {
+    margin: 0; 
+    padding: 0;
+    font-size: 1.8em;
+  }
+  .sample_box11_tape {
+    width: 50%;
+    height: 35px;
+    margin: -25px auto 0;
+    background: #989898;
+    transform: rotate(-3deg);
+    opacity: 0.1;
+  }
+  .sample_box11_title {
+    text-align: center;
+    font-size: 3.0em!important;
+    margin-top: 40px!important;
+  }
+  .sample_box11_subtitle {
+    text-align: center;
+    font-size: 1.8em!important;
+    margin-top: 30px!important;
+    margin-bottom: 2em!important;
+  }
+  .ulapp {
+    padding-left:0;
+  }
+  .listapp {
+    text-align: center;
+    list-style:none;
+    font-size: 2.4em!important;
+    margin-bottom: 0.5em;
+  }
+  .applyarea{
+    width: 100%;
+    height: auto;
+  }
+  .applyflex{
+    display: flex;
+  }
+  .qrarea{
+    width: 50%;
+    height: auto;
+  }
+  .qrimage {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    vertical-align: bottom;
+  }
+  .telarea{
+    width: 50%;
+    height: auto;
+  .telimage {
+    display: block;
+    margin: 0 auto;
+    max-width: 320px;
+    vertical-align: bottom;
+  }
+  .telstrbox{
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 5px solid pink;
+    border-radius: 10px 50px 10px 50px;
+    background-color: #fff;
+    background: repeating-linear-gradient( -45deg, #f3eaf8, #f3eaf8 5px, #fff 5px, #fff 13px );
+    margin: 0 auto;
+  }
+  .telstr{
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .telstr::before{
+    content:"090-";
+  }
+  .telstr::after{
+    content:"-7124";
+  }
+  
+  .accessarea{
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .footerarea{
+    text-align: center;
+  }
+  .danmakuarea{
+    text-align: center;
+  }
+  .danmakuarea img {
+    width: 100%;
+    height: auto;
+  }
+  .footertext{
+    font-size: 24px;
+    text-align: center;
+  }
+
+}
+
+
+/* @media screen and (min-width: 960px) { */
+  /* 960px以上に適用されるCSS（PC用） */
