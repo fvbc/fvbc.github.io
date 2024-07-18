@@ -150,6 +150,15 @@ body {
   font-size: 1.2em!important;
   margin-bottom: 0.5em;
 }
+
+.instaarea{
+  width: 100%;
+  height: auto;
+  /*  background-color: #ffeaea; */
+}
+
+
+
 .qrarea{
   width: 100%;
   height: auto;
