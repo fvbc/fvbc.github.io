@@ -1,0 +1,82 @@
+
+# メモcalilにて5ページ分取得
+# 各URLにて詳細情報取得すれば書名、概要など取れる想定
+
+
+# 参考
+https://calil.jp/search?q=%E3%83%90%E3%83%AC%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%AB&page=2#info_bar
+
+
+
+$BaseURL = "https://calil.jp/search?q=%E3%83%90%E3%83%AC%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%AB&page="
+$URLLastStr = "#info_bar"
+
+$URLList=@();
+
+for($Page=1;$Page -lt 6;$Page++){
+  $URL = $BaseURL + $Page + $URLLastStr
+  $URL
+  sleep 1.5
+  $Response = Invoke-RestMethod $URL
+  
+  foreach($item in ($Response -split "`n" | sls " <a class=`"title`"")){
+    "="*40
+    $item
+    $item -match " href=`"(.+?)`""
+    $URLList += "https://calil.jp" + $Matches[1]
+  }
+}
+
+$URLList
+https://calil.jp/book/4591053326
+https://calil.jp/book/441824137X
+https://calil.jp/book/4065374413
+https://calil.jp/book/4867018724
+https://calil.jp/book/4081023859
+https://calil.jp/book/4262166643
+https://calil.jp/book/439164469X
+https://calil.jp/book/4418241299
+https://calil.jp/book/458311477X
+https://calil.jp/book/4583111614
+https://calil.jp/book/429905489X
+https://calil.jp/book/4408421359
+https://calil.jp/book/4583116349
+https://calil.jp/book/4056117748
+https://calil.jp/book/4469268119
+https://calil.jp/book/4408338508
+https://calil.jp/book/440845530X
+https://calil.jp/book/4583113641
+https://calil.jp/book/459358406X
+https://calil.jp/book/4891963697
+https://calil.jp/book/4583028679
+https://calil.jp/book/4583035047
+https://calil.jp/book/4323064942
+https://calil.jp/book/4469161411
+https://calil.jp/book/4583106734
+https://calil.jp/book/4583107358
+https://calil.jp/book/4415012949
+https://calil.jp/book/4583015615
+https://calil.jp/book/4061764918
+https://calil.jp/book/4262112411
+https://calil.jp/book/4415011128
+https://calil.jp/book/4408395811
+https://calil.jp/book/4583114915
+https://calil.jp/book/4638011225
+https://calil.jp/book/4816344896
+https://calil.jp/book/4061873261
+https://calil.jp/book/4408455237
+https://calil.jp/book/4583107161
+https://calil.jp/book/4469162078
+https://calil.jp/book/4469162086
+https://calil.jp/book/4582824153
+https://calil.jp/book/4811379675
+https://calil.jp/book/4890132260
+https://calil.jp/book/406319860X
+https://calil.jp/book/4063605213
+https://calil.jp/book/4408453935
+https://calil.jp/book/4088701283
+https://calil.jp/book/4063605221
+https://calil.jp/book/4063198596
+https://calil.jp/book/4583030584
+
+
