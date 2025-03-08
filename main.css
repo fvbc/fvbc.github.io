@@ -194,7 +194,7 @@ body {
   content:"090-";
 }
 .telstr::after{
-  content:"-7124";
+  content:"-7127";
 }
 
 /*
@@ -507,7 +507,7 @@ body {
     content:"090-";
   }
   .telstr::after{
-    content:"-7124";
+    content:"-7127";
   }
   
   .accessarea{
